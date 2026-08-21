@@ -1,0 +1,35 @@
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { MainLayout } from '../components/layout/MainLayout.jsx'
+import { AboutPage } from '../pages/AboutPage.jsx'
+import { BusinessServicesPage } from '../pages/divisions/BusinessServicesPage.jsx'
+import { ContactPage } from '../pages/ContactPage.jsx'
+import { EngineeringPage } from '../pages/divisions/EngineeringPage.jsx'
+import { HomePage } from '../pages/HomePage.jsx'
+import { IndustriesPage } from '../pages/IndustriesPage.jsx'
+import { LogisticsPage } from '../pages/divisions/LogisticsPage.jsx'
+import { NotFoundPage } from '../pages/NotFoundPage.jsx'
+import { ProjectsPage } from '../pages/ProjectsPage.jsx'
+import { TechnologyPage } from '../pages/divisions/TechnologyPage.jsx'
+
+export function AppRoutes() {
+  return (
+    <Routes>
+      <Route element={<MainLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="industries" element={<IndustriesPage />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route
+          path="engineering-contracting"
+          element={<EngineeringPage />}
+        />
+        <Route path="technology" element={<TechnologyPage />} />
+        <Route path="logistics-equipment" element={<LogisticsPage />} />
+        <Route path="business-services" element={<BusinessServicesPage />} />
+        <Route path="home" element={<Navigate to="/" replace />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
+  )
+}
