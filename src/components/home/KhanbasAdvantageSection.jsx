@@ -15,34 +15,34 @@ const markers = [
 
 export function KhanbasAdvantageSection() {
   return (
-    <section className="bg-[linear-gradient(180deg,#f4eddf_0%,#ede3d3_100%)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="bg-[linear-gradient(180deg,#f4eddf_0%,#ede3d3_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
       <div className="mx-auto max-w-7xl">
-        <div className="overflow-hidden rounded-[2.75rem] border border-black/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.55)_0%,rgba(255,255,255,0.34)_100%)] shadow-[0_24px_60px_rgba(47,34,18,0.12)] backdrop-blur">
-          <div className="grid gap-12 px-6 py-10 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-12">
+        <div className="overflow-hidden rounded-[2.25rem] border border-black/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.58)_0%,rgba(255,255,255,0.36)_100%)] shadow-[0_20px_46px_rgba(47,34,18,0.1)] backdrop-blur">
+          <div className="grid gap-8 px-5 py-6 sm:px-6 sm:py-7 lg:grid-cols-[0.86fr_1.14fr] lg:px-8 lg:py-8">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
                 The Khanbas Advantage
               </p>
-              <h2 className="mt-4 font-display text-4xl leading-[0.95] text-[#18120d] sm:text-5xl">
+              <h2 className="mt-3 font-display text-[2.7rem] leading-[0.92] text-[#18120d] sm:text-[3.25rem]">
                 More Capability. Less Complexity.
               </h2>
-              <p className="mt-6 max-w-xl text-base leading-8 text-[#4c4033] sm:text-lg">
+              <p className="mt-4 max-w-lg text-[1rem] leading-7 text-[#4c4033] sm:text-[1.05rem]">
                 Large projects rarely depend on one service alone. KHANBAS
                 brings multiple disciplines together so clients can coordinate
                 more of their requirements through one partner.
               </p>
 
-              <div className="mt-8 space-y-4">
+              <div className="mt-6 space-y-3">
                 {advantageFlow.map((item, index) => (
                   <div key={item.title} className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#c9973d]/25 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[#a87124]">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c9973d]/25 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[#a87124]">
                       0{index + 1}
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.28em] text-[#74695c]">
+                      <p className="text-[0.78rem] uppercase tracking-[0.28em] text-[#74695c]">
                         {item.title}
                       </p>
-                      <p className="mt-1 font-display text-2xl text-[#18120d]">
+                      <p className="mt-0.5 font-display text-[1.85rem] leading-none text-[#18120d]">
                         {item.action}
                       </p>
                     </div>
@@ -50,39 +50,39 @@ export function KhanbasAdvantageSection() {
                 ))}
               </div>
 
-              <p className="mt-8 text-sm uppercase tracking-[0.26em] text-[#a87124]">
+              <p className="mt-6 text-[0.82rem] uppercase tracking-[0.26em] text-[#a87124]">
                 One relationship. Multiple capabilities.
               </p>
             </div>
 
             <div>
-              <div className="relative overflow-hidden rounded-[2.25rem] border border-white/10 bg-black">
+              <div className="relative overflow-hidden rounded-[1.85rem] border border-white/10 bg-black">
                 <img
                   src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80"
                   alt="Integrated commercial project environment"
-                  className="h-[32rem] w-full object-cover opacity-80"
+                  className="h-[24rem] w-full object-cover opacity-80 sm:h-[26rem] lg:h-[28rem]"
                 />
                 <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(7,10,14,0.16),rgba(7,10,14,0.68))]" />
 
                 {markers.map((marker) => (
                   <div key={marker.label} className={`absolute ${marker.style}`}>
-                    <div className="flex items-center gap-3">
-                      <span className="relative flex h-4 w-4">
+                    <div className="flex items-center gap-2.5">
+                      <span className="relative flex h-3.5 w-3.5">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[color:var(--color-gold-bright)]/35" />
-                        <span className="relative inline-flex h-4 w-4 rounded-full border border-white/40 bg-[color:var(--color-gold-bright)]" />
+                        <span className="relative inline-flex h-3.5 w-3.5 rounded-full border border-white/40 bg-[color:var(--color-gold-bright)]" />
                       </span>
-                      <div className="rounded-2xl border border-white/10 bg-[rgba(10,15,22,0.78)] px-4 py-3 shadow-[0_12px_30px_rgba(0,0,0,0.24)] backdrop-blur">
-                        <p className="text-[0.68rem] uppercase tracking-[0.26em] text-[color:var(--color-gold-bright)]">
+                      <div className="rounded-[1.1rem] border border-white/10 bg-[rgba(10,15,22,0.8)] px-3 py-2.5 shadow-[0_10px_24px_rgba(0,0,0,0.22)] backdrop-blur">
+                        <p className="text-[0.6rem] uppercase tracking-[0.24em] text-[color:var(--color-gold-bright)]">
                           {marker.division}
                         </p>
-                        <p className="mt-1 text-sm text-white">{marker.label}</p>
+                        <p className="mt-0.5 text-[0.92rem] font-medium text-white">{marker.label}</p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-[#675d50]">
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-[#675d50]">
                 Whether a requirement involves one division or several, KHANBAS
                 can bring the right capabilities around the project.
               </p>
