@@ -15,18 +15,18 @@ const markers = [
 
 export function KhanbasAdvantageSection() {
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="bg-[linear-gradient(180deg,#f4eddf_0%,#ede3d3_100%)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="overflow-hidden rounded-[2.75rem] border border-white/10 bg-[linear-gradient(180deg,#0b1118_0%,#111923_100%)] shadow-[0_30px_80px_rgba(0,0,0,0.28)]">
+        <div className="overflow-hidden rounded-[2.75rem] border border-black/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.55)_0%,rgba(255,255,255,0.34)_100%)] shadow-[0_24px_60px_rgba(47,34,18,0.12)] backdrop-blur">
           <div className="grid gap-12 px-6 py-10 sm:px-8 lg:grid-cols-[0.9fr_1.1fr] lg:px-10 lg:py-12">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
                 The Khanbas Advantage
               </p>
-              <h2 className="mt-4 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
+              <h2 className="mt-4 font-display text-4xl leading-[0.95] text-[#18120d] sm:text-5xl">
                 More Capability. Less Complexity.
               </h2>
-              <p className="mt-6 max-w-xl text-base leading-8 text-[color:var(--color-sand)] sm:text-lg">
+              <p className="mt-6 max-w-xl text-base leading-8 text-[#4c4033] sm:text-lg">
                 Large projects rarely depend on one service alone. KHANBAS
                 brings multiple disciplines together so clients can coordinate
                 more of their requirements through one partner.
@@ -35,14 +35,14 @@ export function KhanbasAdvantageSection() {
               <div className="mt-8 space-y-4">
                 {advantageFlow.map((item, index) => (
                   <div key={item.title} className="flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[color:var(--color-gold-soft)]/25 bg-white/[0.03] text-sm font-semibold text-[color:var(--color-gold-bright)]">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-[#c9973d]/25 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[#a87124]">
                       0{index + 1}
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.28em] text-[color:var(--color-mist)]">
+                      <p className="text-sm uppercase tracking-[0.28em] text-[#74695c]">
                         {item.title}
                       </p>
-                      <p className="mt-1 font-display text-2xl text-white">
+                      <p className="mt-1 font-display text-2xl text-[#18120d]">
                         {item.action}
                       </p>
                     </div>
@@ -50,7 +50,7 @@ export function KhanbasAdvantageSection() {
                 ))}
               </div>
 
-              <p className="mt-8 text-sm uppercase tracking-[0.26em] text-[color:var(--color-gold-bright)]">
+              <p className="mt-8 text-sm uppercase tracking-[0.26em] text-[#a87124]">
                 One relationship. Multiple capabilities.
               </p>
             </div>
@@ -82,7 +82,7 @@ export function KhanbasAdvantageSection() {
                 ))}
               </div>
 
-              <p className="mt-5 max-w-2xl text-sm leading-7 text-[color:var(--color-mist)]">
+              <p className="mt-5 max-w-2xl text-sm leading-7 text-[#675d50]">
                 Whether a requirement involves one division or several, KHANBAS
                 can bring the right capabilities around the project.
               </p>
