@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom'
+import { BusinessDivisionsSection } from '../components/home/BusinessDivisionsSection.jsx'
+import { IndustriesSection } from '../components/home/IndustriesSection.jsx'
+import { KhanbasAdvantageSection } from '../components/home/KhanbasAdvantageSection.jsx'
 import { WhoWeAreSection } from '../components/home/WhoWeAreSection.jsx'
-import { PagePlaceholder } from '../components/page/PagePlaceholder.jsx'
+import { WhyKhanbasSection } from '../components/home/WhyKhanbasSection.jsx'
 import { PageShell } from '../components/page/PageShell.jsx'
 
 export function HomePage() {
@@ -30,16 +33,10 @@ export function HomePage() {
       </PageShell>
 
       <WhoWeAreSection />
-
-      <PagePlaceholder
-        items={[
-          'Four Business Divisions',
-          'Khanbas Advantage',
-          'Industries We Support',
-          'Why Khanbas',
-          'Cross-Division Scenarios',
-        ]}
-      />
+      <BusinessDivisionsSection />
+      <KhanbasAdvantageSection />
+      <IndustriesSection />
+      <WhyKhanbasSection />
     </>
   )
 }
