@@ -34,7 +34,7 @@ const scenarios = [
 
 export function WhyKhanbasSection() {
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="bg-[#0a1118] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
           <div className="rounded-[2.5rem] border border-white/10 bg-[linear-gradient(165deg,rgba(201,151,61,0.12),rgba(14,20,27,0.92))] p-7 shadow-[0_24px_60px_rgba(0,0,0,0.2)] sm:p-8">

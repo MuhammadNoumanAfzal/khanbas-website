@@ -27,13 +27,13 @@ const industries = [
 
 export function IndustriesSection() {
   return (
-    <section className="px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="bg-[linear-gradient(180deg,#f2eadc_0%,#ebe1d2_100%)] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+          <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-soft)]">
             Industries We Support
           </p>
-          <h2 className="mt-4 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
+          <h2 className="mt-4 font-display text-4xl leading-[0.95] text-[color:var(--color-ink)] sm:text-5xl">
             Capabilities Across Industries.
           </h2>
         </div>
@@ -42,7 +42,7 @@ export function IndustriesSection() {
           {industries.map((industry, index) => (
             <article
               key={industry.title}
-              className={`group grid overflow-hidden rounded-[2.25rem] border border-white/10 bg-[rgba(255,255,255,0.03)] shadow-[0_26px_60px_rgba(0,0,0,0.18)] lg:grid-cols-[${index % 2 === 0 ? '1.05fr_0.95fr' : '0.95fr_1.05fr'}]`}
+              className={`group grid overflow-hidden rounded-[2.25rem] border border-black/8 bg-[rgba(255,255,255,0.55)] shadow-[0_26px_60px_rgba(47,34,18,0.1)] lg:grid-cols-[${index % 2 === 0 ? '1.05fr_0.95fr' : '0.95fr_1.05fr'}]`}
             >
               <div className={`${index % 2 !== 0 ? 'lg:order-2' : ''} relative min-h-[19rem] overflow-hidden`}>
                 <img
@@ -54,17 +54,17 @@ export function IndustriesSection() {
               </div>
 
               <div className={`${index % 2 !== 0 ? 'lg:order-1' : ''} flex flex-col justify-center p-6 sm:p-8`}>
-                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-gold-bright)]">
+                <p className="text-xs uppercase tracking-[0.3em] text-[color:var(--color-gold-soft)]">
                   Sector 0{index + 1}
                 </p>
-                <h3 className="mt-3 font-display text-3xl leading-tight text-white sm:text-4xl">
+                <h3 className="mt-3 font-display text-3xl leading-tight text-[color:var(--color-ink)] sm:text-4xl">
                   {industry.title}
                 </h3>
                 <div className="mt-6 flex flex-wrap gap-3">
                   {industry.items.map((item) => (
                     <span
                       key={item}
-                      className="rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm text-[color:var(--color-sand)]"
+                      className="rounded-full border border-black/8 bg-white/65 px-4 py-2 text-sm text-[color:#625544]"
                     >
                       {item}
                     </span>

@@ -65,7 +65,7 @@ const divisions = [
 
 export function BusinessDivisionsSection() {
   return (
-    <section className="px-4 pb-16 pt-6 sm:px-6 sm:pb-20 sm:pt-8 lg:px-8 lg:pb-24 lg:pt-10 bg-[#0c131b]">
+    <section className="bg-[#0c131b] px-4 pb-16 pt-6 sm:px-6 sm:pb-20 sm:pt-8 lg:px-8 lg:pb-24 lg:pt-10">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-wrap items-end justify-between gap-6 border-t border-white/8 pt-10 sm:pt-12">
           <div className="max-w-2xl">
