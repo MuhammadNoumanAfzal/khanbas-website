@@ -29,39 +29,39 @@ export function WhoWeAreSection() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-soft)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
               Who We Are
             </p>
-            <h2 className="mt-4 max-w-lg font-display text-[2.8rem] leading-[0.92] text-[color:var(--color-ink)] sm:text-5xl">
+            <h2 className="mt-4 max-w-lg font-display text-[2.8rem] leading-[0.92] text-[#16110c] sm:text-5xl">
               Built to Support More.
             </h2>
             <div className="mt-5 h-px w-20 bg-[linear-gradient(90deg,rgba(201,151,61,0.95),rgba(201,151,61,0))]" />
-            <p className="mt-6 max-w-lg text-[1.05rem] leading-8 text-[color:#564835]">
+            <p className="mt-6 max-w-lg text-[1.05rem] leading-8 text-[#3d3126]">
               KHANBAS is a multidisciplinary Saudi company providing
               engineering, technology, logistics, and business support
               services.
             </p>
-            <p className="mt-4 max-w-lg text-[0.98rem] leading-8 text-[color:#716857] sm:text-[1.05rem]">
+            <p className="mt-4 max-w-lg text-[0.98rem] leading-8 text-[#5e5548] sm:text-[1.05rem]">
               Our structure allows clients to access specialized capabilities
               across multiple requirements while working with one coordinated
               partner.
             </p>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-[1.35rem] border border-black/8 bg-white/55 p-3.5 shadow-[0_14px_30px_rgba(47,34,18,0.08)] backdrop-blur">
-                <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--color-gold-soft)]">
+              <div className="rounded-[1.35rem] border border-[#223647]/55 bg-[linear-gradient(180deg,#172633_0%,#1d2f3d_100%)] p-3.5 shadow-[0_16px_34px_rgba(21,34,46,0.22)] transition hover:border-[#c9973d]/55 hover:bg-[linear-gradient(180deg,#223748_0%,#2b4253_100%)]">
+                <p className="text-xs uppercase tracking-[0.28em] text-[#d7a64e]">
                   Core Position
                 </p>
-                <p className="mt-2 text-sm leading-7 text-[color:#625544]">
+                <p className="mt-2 text-sm leading-7 text-[#edf2f5]">
                   One coordinated partner across engineering, logistics,
                   technology, and operational support.
                 </p>
               </div>
-              <div className="rounded-[1.35rem] border border-[color:var(--color-gold-soft)]/18 bg-[linear-gradient(145deg,rgba(201,151,61,0.14),rgba(255,255,255,0.4))] p-3.5 shadow-[0_14px_30px_rgba(47,34,18,0.06)]">
-                <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--color-gold-soft)]">
+              <div className="rounded-[1.35rem] border border-[#223647]/55 bg-[linear-gradient(180deg,#182836_0%,#213343_100%)] p-3.5 shadow-[0_16px_34px_rgba(21,34,46,0.2)] transition hover:border-[#c9973d]/55 hover:bg-[linear-gradient(180deg,#223748_0%,#2c4353_100%)]">
+                <p className="text-xs uppercase tracking-[0.28em] text-[#d7a64e]">
                   Visual Balance
                 </p>
-                <p className="mt-2 text-sm leading-7 text-[color:#625544]">
+                <p className="mt-2 text-sm leading-7 text-[#edf2f5]">
                   The story stays broader than technology so the brand feels
                   diversified and credible.
                 </p>
@@ -71,7 +71,7 @@ export function WhoWeAreSection() {
             <div className="mt-6">
               <Link
                 to="/about"
-                className="inline-flex items-center rounded-full border border-[color:var(--color-gold-soft)]/55 px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] transition hover:bg-[color:var(--color-gold-soft)]/12 hover:text-[color:var(--color-gold-soft)]"
+                className="inline-flex items-center rounded-full border border-[#223647]/70 bg-[linear-gradient(180deg,#172633_0%,#1d2f3d_100%)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#eef2f4] shadow-[0_14px_28px_rgba(21,34,46,0.22)] transition hover:border-[#c9973d]/80 hover:bg-[linear-gradient(135deg,#f1cb71_0%,#c9973d_100%)] hover:text-[#16110c]"
               >
                 Discover Khanbas
               </Link>
@@ -86,7 +86,7 @@ export function WhoWeAreSection() {
               {collageImages.map((image) => (
                 <article
                   key={image.label}
-                  className="group relative aspect-[1.5] overflow-hidden rounded-[1.5rem]  border-black/8 bg-[color:var(--color-panel)] shadow-[0_16px_34px_rgba(47,34,18,0.1)]"
+                  className="group relative aspect-[1.5] overflow-hidden rounded-[1.5rem] border border-black/8 bg-[color:var(--color-panel)] shadow-[0_16px_34px_rgba(47,34,18,0.1)]"
                 >
                   <img
                     src={image.src}
