@@ -8,8 +8,8 @@ export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="absolute inset-x-0 top-0 z-40 px-4 pt-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl rounded-[2rem] border border-white/10 bg-[rgba(7,10,14,0.18)] px-4 py-4 shadow-[0_20px_50px_rgba(0,0,0,0.2)] backdrop-blur-md xl:px-6">
+    <header className="sticky top-0 z-40 border-b border-[color:var(--color-gold-soft)]/15 bg-[rgba(10,14,19,0.94)] shadow-[0_16px_40px_rgba(0,0,0,0.28)] backdrop-blur">
+      <div className="mx-auto max-w-7xl px-4 py-5 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           <BrandMark />
 
