@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { WhoWeAreSection } from '../components/home/WhoWeAreSection.jsx'
 import { PagePlaceholder } from '../components/page/PagePlaceholder.jsx'
 import { PageShell } from '../components/page/PageShell.jsx'
 
@@ -28,9 +29,10 @@ export function HomePage() {
         </div>
       </PageShell>
 
+      <WhoWeAreSection />
+
       <PagePlaceholder
         items={[
-          'Who We Are',
           'Four Business Divisions',
           'Khanbas Advantage',
           'Industries We Support',
