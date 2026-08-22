@@ -18,9 +18,9 @@ export function SiteHeader() {
           <div className="flex items-center gap-3">
             <Link
               to="/contact"
-              className="hidden rounded-full border border-[color:var(--color-gold-soft)]/60 bg-[linear-gradient(135deg,rgba(244,205,112,0.95),rgba(171,124,42,0.95))] px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] shadow-[0_18px_35px_rgba(171,124,42,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_40px_rgba(171,124,42,0.35)] sm:inline-flex"
+              className="hidden whitespace-nowrap rounded-full border border-[color:var(--color-gold-soft)]/60 bg-[linear-gradient(135deg,rgba(244,205,112,0.95),rgba(171,124,42,0.95))] px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-[color:var(--color-ink)] shadow-[0_18px_35px_rgba(171,124,42,0.25)] transition hover:-translate-y-0.5 hover:shadow-[0_22px_40px_rgba(171,124,42,0.35)] sm:inline-flex"
             >
-              Talk to Our Team
+              Talk to our team
             </Link>
 
             <button

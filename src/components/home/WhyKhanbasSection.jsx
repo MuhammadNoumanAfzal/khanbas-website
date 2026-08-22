@@ -34,23 +34,27 @@ const scenarios = [
 
 export function WhyKhanbasSection() {
   return (
-    <section className="bg-[#0a1118] px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
+    <section className="bg-[linear-gradient(180deg,#f4eddf_0%,#ede4d5_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr]">
-          <div className="rounded-[2.5rem] border border-white/10 bg-[linear-gradient(165deg,rgba(201,151,61,0.12),rgba(14,20,27,0.92))] p-7 shadow-[0_24px_60px_rgba(0,0,0,0.2)] sm:p-8">
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+        <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-8">
+          <div className="rounded-[2rem] border border-black/8 bg-[rgba(255,255,255,0.48)] p-5 shadow-[0_18px_40px_rgba(47,34,18,0.08)] backdrop-blur sm:p-6">
+            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
               Why Khanbas
             </p>
-            <h2 className="mt-4 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
+            <h2 className="mt-3 font-display text-[2.5rem] leading-[0.94] text-[#18120d] sm:text-[3rem]">
               One Relationship. Broader Capability.
             </h2>
-            <div className="mt-8 space-y-4">
+
+            <div className="mt-5 grid gap-3">
               {reasons.map((reason) => (
-                <div key={reason.title} className="rounded-[1.5rem] border border-white/10 bg-black/12 p-5 backdrop-blur">
-                  <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
+                <div
+                  key={reason.title}
+                  className="rounded-[1.25rem] border border-black/8 bg-white/55 p-4"
+                >
+                  <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#ad782c]">
                     {reason.title}
                   </p>
-                  <p className="mt-3 text-sm leading-7 text-[color:var(--color-sand)]">
+                  <p className="mt-2 text-sm leading-6 text-[#514538]">
                     {reason.text}
                   </p>
                 </div>
@@ -61,35 +65,35 @@ export function WhyKhanbasSection() {
           <div>
             <div className="flex items-end justify-between gap-4">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+                <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
                   Cross-Division Scenarios
                 </p>
-                <h3 className="mt-4 font-display text-4xl leading-[0.95] text-white sm:text-5xl">
+                <h3 className="mt-3 font-display text-[2.45rem] leading-[0.94] text-[#18120d] sm:text-[3rem]">
                   How KHANBAS Comes Together
                 </h3>
               </div>
               <div className="hidden h-px flex-1 bg-[linear-gradient(90deg,rgba(201,151,61,0.45),transparent)] lg:block" />
             </div>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-5 space-y-3">
               {scenarios.map((scenario, index) => (
                 <article
                   key={scenario.title}
-                  className="group overflow-hidden rounded-[2rem] border border-white/10 bg-[rgba(255,255,255,0.03)] transition hover:border-[color:var(--color-gold-soft)]/35 hover:bg-white/[0.045]"
+                  className="overflow-hidden rounded-[1.7rem] border border-black/8 bg-[rgba(255,255,255,0.56)] shadow-[0_16px_34px_rgba(47,34,18,0.06)]"
                 >
-                  <div className="grid gap-6 p-6 sm:p-7 lg:grid-cols-[auto_1fr] lg:items-start">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[color:var(--color-gold-soft)]/20 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[color:var(--color-gold-bright)]">
+                  <div className="grid gap-4 p-4 sm:p-5 lg:grid-cols-[auto_1fr] lg:items-start">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#c9973d]/20 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[#a87124]">
                       0{index + 1}
                     </div>
                     <div>
-                      <h4 className="font-display text-3xl text-white">
+                      <h4 className="font-display text-[1.95rem] leading-none text-[#18120d]">
                         {scenario.title}
                       </h4>
-                      <div className="mt-5 flex flex-wrap gap-3">
+                      <div className="mt-3 flex flex-wrap gap-2">
                         {scenario.lines.map((line) => (
                           <span
                             key={line}
-                            className="rounded-full border border-white/10 px-4 py-2 text-sm text-[color:var(--color-sand)]"
+                            className="rounded-full border border-black/8 bg-white/72 px-3 py-1.5 text-[0.78rem] text-[#5a4d3f]"
                           >
                             {line}
                           </span>
