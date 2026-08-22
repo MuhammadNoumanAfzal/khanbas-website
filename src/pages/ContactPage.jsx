@@ -114,110 +114,157 @@ export function ContactPage() {
             <div className="absolute -left-6 top-8 hidden h-28 w-28 rounded-full bg-[rgba(201,151,61,0.14)] blur-3xl lg:block" />
             <div className="absolute -right-4 bottom-10 hidden h-32 w-32 rounded-full bg-[rgba(28,52,78,0.2)] blur-3xl lg:block" />
 
-            <div className="relative border border-[#31465d] bg-[linear-gradient(180deg,rgba(247,242,232,0.97),rgba(239,229,213,0.93))] px-5 py-6 shadow-[0_28px_60px_rgba(4,10,18,0.28)] backdrop-blur sm:px-7 sm:py-8 lg:px-8">
-              <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-                <div>
-                  <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#9c6c26]">
+            <div className="relative overflow-hidden border border-[#31465d] bg-[linear-gradient(145deg,rgba(248,244,236,0.98)_0%,rgba(238,228,210,0.94)_55%,rgba(230,218,198,0.92)_100%)] shadow-[0_30px_70px_rgba(4,10,18,0.32)] backdrop-blur">
+              <div className="absolute inset-x-0 top-0 h-px bg-[linear-gradient(90deg,transparent,rgba(201,151,61,0.85),transparent)]" />
+              <div className="absolute right-0 top-0 h-40 w-40 bg-[radial-gradient(circle,rgba(201,151,61,0.16),transparent_65%)]" />
+
+              <div className="grid gap-8 px-5 py-6 sm:px-7 sm:py-8 lg:grid-cols-[0.34fr_1fr] lg:px-8">
+                <div className="border-b border-[#ccb48d]/60 pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
+                  <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#9c6c26]">
                     Inquiry Form
                   </p>
                   <h2 className="mt-3 font-display text-[2.3rem] leading-[0.94] text-[#142537] sm:text-[2.7rem]">
-                    Tell us about your inquiry.
+                    Tell us what matters.
                   </h2>
-                </div>
-                <p className="max-w-sm text-sm leading-7 text-[#5a6b79]">
-                  A brief summary helps our team understand your needs and return
-                  with the right response.
-                </p>
-              </div>
-
-              <form className="grid gap-5">
-                <div className="grid gap-5 md:grid-cols-2">
-                  <label className="block">
-                    <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
-                      Full Name
-                    </span>
-                    <input
-                      type="text"
-                      placeholder="Your name"
-                      className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition placeholder:text-[#8b99a5] focus:border-[#9c6c26]"
-                    />
-                  </label>
-
-                  <label className="block">
-                    <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
-                      Company
-                    </span>
-                    <input
-                      type="text"
-                      placeholder="Company or organization"
-                      className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition placeholder:text-[#8b99a5] focus:border-[#9c6c26]"
-                    />
-                  </label>
-                </div>
-
-                <div className="grid gap-5 md:grid-cols-2">
-                  <label className="block">
-                    <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
-                      Email
-                    </span>
-                    <input
-                      type="email"
-                      placeholder="name@company.com"
-                      className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition placeholder:text-[#8b99a5] focus:border-[#9c6c26]"
-                    />
-                  </label>
-
-                  <label className="block">
-                    <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
-                      Phone
-                    </span>
-                    <input
-                      type="tel"
-                      placeholder="+966"
-                      className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition placeholder:text-[#8b99a5] focus:border-[#9c6c26]"
-                    />
-                  </label>
-                </div>
-
-                <label className="block">
-                  <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
-                    Service Type
-                  </span>
-                  <select className="w-full cursor-pointer border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition focus:border-[#9c6c26]">
-                    <option>Choose an inquiry type</option>
-                    {inquiryTypes.map((item) => (
-                      <option key={item}>{item}</option>
-                    ))}
-                  </select>
-                </label>
-
-                <label className="block">
-                  <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
-                    Project or Inquiry
-                  </span>
-                  <textarea
-                    rows="6"
-                    placeholder="Please share your requirement, project stage, location, and the type of support you are looking for."
-                    className="w-full resize-none cursor-text border border-[#d6c09b] bg-[rgba(255,255,255,0.34)] px-4 py-4 text-base leading-7 text-[#12253a] outline-none transition placeholder:text-[#8b99a5] focus:border-[#9c6c26] focus:bg-[rgba(255,255,255,0.54)]"
-                  />
-                </label>
-
-                <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
-                  <p className="max-w-md text-sm leading-7 text-[#5a6b79]">
-                    Suitable for new project discussions, service requests, and
-                    early coordination across KHANBAS divisions.
+                  <p className="mt-4 text-sm leading-7 text-[#586a79]">
+                    Share the essentials and we will guide your inquiry to the
+                    right team with clear next steps.
                   </p>
-                  <button
-                    type="submit"
-                    className="group inline-flex cursor-pointer items-center gap-3 rounded-full border border-[#c9973d]/70 bg-[linear-gradient(135deg,rgba(244,205,112,0.96),rgba(171,124,42,0.96))] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(171,124,42,0.22)]"
-                  >
-                    Submit Inquiry
-                    <span className="transition-transform duration-300 group-hover:translate-x-1">
-                      +
-                    </span>
-                  </button>
+
+                  <div className="mt-6 space-y-3">
+                    <div className="border-b border-[#d7c3a2]/70 pb-3">
+                      <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9c6c26]">
+                        Response
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-[#193147]">
+                        Business-day follow-up
+                      </p>
+                    </div>
+                    <div className="border-b border-[#d7c3a2]/70 pb-3">
+                      <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9c6c26]">
+                        Best For
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-[#193147]">
+                        Projects, service requests, and early coordination
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9c6c26]">
+                        Approach
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-[#193147]">
+                        Structured, discreet, and professional
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </form>
+
+                <div>
+                  <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+                    <div>
+                      <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#9c6c26]">
+                        Contact Request
+                      </p>
+                      <h3 className="mt-2 font-display text-[2rem] leading-[0.96] text-[#142537] sm:text-[2.35rem]">
+                        A refined form for serious inquiries.
+                      </h3>
+                    </div>
+                    <p className="max-w-sm text-sm leading-7 text-[#5a6b79]">
+                      A concise message helps our team review your request faster
+                      and respond with better direction.
+                    </p>
+                  </div>
+
+                  <form className="grid gap-5">
+                    <div className="grid gap-5 md:grid-cols-2">
+                      <label className="group block">
+                        <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
+                          Full Name
+                        </span>
+                        <input
+                          type="text"
+                          placeholder="Your name"
+                          className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] group-hover:border-[#b88a48]"
+                        />
+                      </label>
+
+                      <label className="group block">
+                        <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
+                          Company
+                        </span>
+                        <input
+                          type="text"
+                          placeholder="Company or organization"
+                          className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] group-hover:border-[#b88a48]"
+                        />
+                      </label>
+                    </div>
+
+                    <div className="grid gap-5 md:grid-cols-2">
+                      <label className="group block">
+                        <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
+                          Email
+                        </span>
+                        <input
+                          type="email"
+                          placeholder="name@company.com"
+                          className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] group-hover:border-[#b88a48]"
+                        />
+                      </label>
+
+                      <label className="group block">
+                        <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
+                          Phone
+                        </span>
+                        <input
+                          type="tel"
+                          placeholder="+966"
+                          className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] group-hover:border-[#b88a48]"
+                        />
+                      </label>
+                    </div>
+
+                    <label className="group block">
+                      <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
+                        Service Type
+                      </span>
+                      <select className="w-full cursor-pointer border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition duration-300 focus:border-[#9c6c26] group-hover:border-[#b88a48]">
+                        <option>Choose an inquiry type</option>
+                        {inquiryTypes.map((item) => (
+                          <option key={item}>{item}</option>
+                        ))}
+                      </select>
+                    </label>
+
+                    <label className="group block">
+                      <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
+                        Project or Inquiry
+                      </span>
+                      <textarea
+                        rows="6"
+                        placeholder="Please share your requirement, project stage, location, and the type of support you are looking for."
+                        className="w-full resize-none cursor-text border border-[#d6c09b] bg-[rgba(255,255,255,0.38)] px-4 py-4 text-base leading-7 text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] focus:bg-[rgba(255,255,255,0.56)] group-hover:border-[#b88a48]"
+                      />
+                    </label>
+
+                    <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
+                      <p className="max-w-md text-sm leading-7 text-[#5a6b79]">
+                        Suitable for new project discussions, service requests,
+                        and early coordination across KHANBAS divisions.
+                      </p>
+                      <button
+                        type="submit"
+                        className="group inline-flex cursor-pointer items-center gap-3 rounded-full border border-[#c9973d]/70 bg-[linear-gradient(135deg,rgba(244,205,112,0.96),rgba(171,124,42,0.96))] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_30px_rgba(171,124,42,0.22)]"
+                      >
+                        Submit Inquiry
+                        <span className="transition-transform duration-300 group-hover:translate-x-1">
+                          +
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
             </div>
           </div>
         </div>
