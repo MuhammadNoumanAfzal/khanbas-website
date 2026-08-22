@@ -126,58 +126,110 @@ export function AboutPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0c1520_0%,#0a121b_100%)] px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(201,151,61,0.12),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(44,75,109,0.18),transparent_28%)]" />
+      <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0c1520_0%,#09111a_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(201,151,61,0.12),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(44,75,109,0.2),transparent_28%),linear-gradient(90deg,transparent,rgba(255,255,255,0.02),transparent)]" />
         <div className="relative mx-auto max-w-7xl">
-          <div className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
-              Vision & Mission
+          <div className="grid gap-6 border-b border-white/8 pb-7 lg:grid-cols-[1.1fr_0.7fr] lg:items-end">
+            <div className="max-w-4xl">
+              <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+                Vision & Mission
+              </p>
+              <h2 className="mt-3 font-display text-[2.5rem] leading-[0.92] text-white sm:text-[3rem] lg:text-[3.45rem]">
+                Clear direction, practical execution, and long-term relationships.
+              </h2>
+            </div>
+            <p className="max-w-md text-sm leading-7 text-[#9db0c1] lg:justify-self-end">
+              A disciplined long-term view supported by practical delivery across
+              engineering, technology, logistics, and business services.
             </p>
-            <h2 className="mt-3 font-display text-[2.8rem] leading-[0.92] text-white sm:text-[3.4rem]">
-              Clear direction, practical execution, and long-term relationships.
-            </h2>
           </div>
 
-          <div className="mt-10 grid gap-6 lg:grid-cols-[1fr_1fr]">
-            <div className="border border-white/10 bg-white/[0.03] p-7 backdrop-blur">
-              <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
-                Our Vision
-              </p>
-              <p className="mt-4 text-lg leading-8 text-[#d6e0e8]">
-                To build KHANBAS into a trusted multidisciplinary partner supporting
-                the growth and operations of businesses and projects across Saudi Arabia.
-              </p>
+          <div className="mt-8 grid gap-5 lg:grid-cols-[0.92fr_1.08fr]">
+            <div className="relative overflow-hidden border border-[#33485f] bg-[linear-gradient(180deg,#132231_0%,#1a2e40_100%)] p-6 shadow-[0_24px_48px_rgba(0,0,0,0.18)]">
+              <div className="absolute right-0 top-0 h-24 w-24 bg-[radial-gradient(circle,rgba(201,151,61,0.18),transparent_68%)]" />
+              <div className="relative">
+                <div className="mb-6 flex items-center justify-between gap-4">
+                  <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
+                    Our Vision
+                  </p>
+                  <div className="h-px flex-1 bg-[linear-gradient(90deg,rgba(201,151,61,0.55),transparent)]" />
+                </div>
+                <p className="font-display text-[1.8rem] leading-[1.03] text-white sm:text-[2.15rem]">
+                  A trusted multidisciplinary partner for growth and operations in Saudi Arabia.
+                </p>
+                <p className="mt-4 max-w-xl text-sm leading-6 text-[#c5d3df]">
+                  To build KHANBAS into a trusted multidisciplinary partner supporting
+                  the growth and operations of businesses and projects across Saudi Arabia.
+                </p>
+              </div>
             </div>
-            <div className="border border-[#3d536b] bg-[linear-gradient(180deg,#172736_0%,#1c3042_100%)] p-7 shadow-[0_20px_40px_rgba(0,0,0,0.18)]">
-              <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
-                Our Mission
-              </p>
-              <p className="mt-4 text-lg leading-8 text-[#d6e0e8]">
-                To deliver practical, coordinated solutions across engineering,
-                technology, logistics, and business services while building long-term
-                client relationships.
-              </p>
+
+            <div className="relative overflow-hidden border border-white/10 bg-white/[0.03] p-6 backdrop-blur">
+              <div className="absolute inset-y-0 left-0 w-px bg-[linear-gradient(180deg,transparent,rgba(201,151,61,0.6),transparent)]" />
+              <div className="relative">
+                <div className="mb-6 flex items-center justify-between gap-4">
+                  <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
+                    Our Mission
+                  </p>
+                  <span className="rounded-full border border-white/10 px-3 py-1 text-[0.68rem] uppercase tracking-[0.2em] text-[#a8bbca]">
+                    Coordinated Delivery
+                  </span>
+                </div>
+                <div className="grid gap-6 md:grid-cols-[1fr_auto] md:items-start">
+                  <p className="max-w-2xl text-[1.02rem] leading-7 text-[#dce6ed]">
+                    To deliver practical, coordinated solutions across engineering,
+                    technology, logistics, and business services while building
+                    long-term client relationships.
+                  </p>
+                  <div className="grid gap-3 text-right md:min-w-[170px]">
+                    <div className="border-b border-white/10 pb-3">
+                      <p className="text-[0.68rem] uppercase tracking-[0.22em] text-[#8fa3b4]">
+                        Focus
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-white">
+                        Practical Solutions
+                      </p>
+                    </div>
+                    <div className="border-b border-white/10 pb-3">
+                      <p className="text-[0.68rem] uppercase tracking-[0.22em] text-[#8fa3b4]">
+                        Method
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-white">
+                        Coordinated Support
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-[0.68rem] uppercase tracking-[0.22em] text-[#8fa3b4]">
+                        Outcome
+                      </p>
+                      <p className="mt-1 text-sm font-medium text-white">
+                        Long-Term Trust
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[linear-gradient(180deg,#efe4d1_0%,#e7d9c2_100%)] px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1fr_0.95fr] lg:items-start">
+      <section className="bg-[linear-gradient(180deg,#efe4d1_0%,#e7d9c2_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
+        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1fr_0.95fr] lg:items-start">
           <div>
             <p className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
               Our Operating Model
             </p>
-            <h2 className="mt-3 font-display text-[2.8rem] leading-[0.92] text-[#132538] sm:text-[3.3rem]">
+            <h2 className="mt-3 font-display text-[2.45rem] leading-[0.94] text-[#132538] sm:text-[2.9rem]">
               Specialists when you need them. Integrated when it matters.
             </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[#4d6071]">
+            <p className="mt-4 max-w-2xl text-base leading-7 text-[#4d6071]">
               Each KHANBAS division focuses on its own area of expertise. When a
               requirement crosses disciplines, those capabilities can work together
               around the client without changing the clarity of the structure.
             </p>
 
-            <div className="mt-8 space-y-4">
+            <div className="mt-6 space-y-3">
               {principles.map((item) => (
                 <div
                   key={item.title}
@@ -186,7 +238,7 @@ export function AboutPage() {
                   <h3 className="text-xl font-semibold text-[#183047]">
                     {item.title}
                   </h3>
-                  <p className="mt-2 max-w-2xl text-sm leading-7 text-[#596b79]">
+                  <p className="mt-2 max-w-2xl text-sm leading-6 text-[#596b79]">
                     {item.text}
                   </p>
                 </div>
@@ -194,54 +246,54 @@ export function AboutPage() {
             </div>
           </div>
 
-          <div className="relative flex min-h-[470px] items-center justify-center overflow-hidden border border-[#d5c29d]/55 bg-[linear-gradient(180deg,rgba(249,244,235,0.94),rgba(239,229,211,0.92))] p-8 shadow-[0_26px_50px_rgba(41,31,17,0.1)]">
-            <div className="absolute h-40 w-40 rounded-full border border-[#ccb48a]/45" />
-            <div className="absolute h-64 w-64 rounded-full border border-[#d7c4a1]/35" />
-            <div className="absolute h-88 w-88 rounded-full border border-[#dfcfb0]/25" />
+          <div className="relative flex min-h-[390px] items-center justify-center overflow-hidden border border-[#d5c29d]/55 bg-[linear-gradient(180deg,rgba(249,244,235,0.94),rgba(239,229,211,0.92))] p-6 shadow-[0_26px_50px_rgba(41,31,17,0.1)]">
+            <div className="absolute h-32 w-32 rounded-full border border-[#ccb48a]/45" />
+            <div className="absolute h-52 w-52 rounded-full border border-[#d7c4a1]/35" />
+            <div className="absolute h-72 w-72 rounded-full border border-[#dfcfb0]/25" />
 
             <div className="relative grid h-full w-full place-items-center">
-              <div className="absolute left-0 top-10 max-w-[180px] border border-[#d5c29d]/55 bg-white/55 p-4 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
+              <div className="absolute left-0 top-6 max-w-[165px] border border-[#d5c29d]/55 bg-white/55 p-3 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
                 <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9d6c24]">
                   Division
                 </p>
-                <p className="mt-2 text-lg font-semibold leading-6 text-[#183047]">
+                <p className="mt-2 text-base font-semibold leading-5 text-[#183047]">
                   Engineering & Contracting
                 </p>
               </div>
 
-              <div className="absolute right-0 top-16 max-w-[180px] border border-[#d5c29d]/55 bg-white/55 p-4 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
+              <div className="absolute right-0 top-10 max-w-[165px] border border-[#d5c29d]/55 bg-white/55 p-3 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
                 <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9d6c24]">
                   Division
                 </p>
-                <p className="mt-2 text-lg font-semibold leading-6 text-[#183047]">
+                <p className="mt-2 text-base font-semibold leading-5 text-[#183047]">
                   Technology & Digital
                 </p>
               </div>
 
-              <div className="absolute bottom-16 left-4 max-w-[180px] border border-[#d5c29d]/55 bg-white/55 p-4 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
+              <div className="absolute bottom-10 left-3 max-w-[165px] border border-[#d5c29d]/55 bg-white/55 p-3 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
                 <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9d6c24]">
                   Division
                 </p>
-                <p className="mt-2 text-lg font-semibold leading-6 text-[#183047]">
+                <p className="mt-2 text-base font-semibold leading-5 text-[#183047]">
                   Logistics & Equipment
                 </p>
               </div>
 
-              <div className="absolute bottom-10 right-2 max-w-[200px] border border-[#d5c29d]/55 bg-white/55 p-4 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
+              <div className="absolute bottom-6 right-1 max-w-[180px] border border-[#d5c29d]/55 bg-white/55 p-3 shadow-[0_16px_30px_rgba(40,31,17,0.08)]">
                 <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9d6c24]">
                   Division
                 </p>
-                <p className="mt-2 text-lg font-semibold leading-6 text-[#183047]">
+                <p className="mt-2 text-base font-semibold leading-5 text-[#183047]">
                   Management & Business Services
                 </p>
               </div>
 
-              <div className="z-10 flex h-36 w-36 items-center justify-center rounded-full border border-[#b98740]/40 bg-[linear-gradient(180deg,#182b3c_0%,#21384c_100%)] p-6 text-center shadow-[0_24px_50px_rgba(20,29,39,0.22)]">
+              <div className="z-10 flex h-28 w-28 items-center justify-center rounded-full border border-[#b98740]/40 bg-[linear-gradient(180deg,#182b3c_0%,#21384c_100%)] p-4 text-center shadow-[0_24px_50px_rgba(20,29,39,0.22)]">
                 <div>
                   <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[color:var(--color-gold-bright)]">
                     Center
                   </p>
-                  <p className="mt-2 font-display text-3xl leading-none text-white">
+                  <p className="mt-1 font-display text-[1.8rem] leading-none text-white">
                     KHANBAS
                   </p>
                 </div>
