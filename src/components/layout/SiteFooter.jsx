@@ -1,6 +1,11 @@
 import { Link } from 'react-router-dom'
 import { BrandMark } from '../brand/BrandMark.jsx'
-import { divisionLinks, footerGroups, primaryNavLinks } from '../../data/navigation.js'
+import {
+  divisionsEnabled,
+  divisionLinks,
+  footerGroups,
+  primaryNavLinks,
+} from '../../data/navigation.js'
 
 export function SiteFooter() {
   return (
@@ -39,12 +44,16 @@ export function SiteFooter() {
                 {group.items.map((item, itemIndex) => (
                   <li key={`${group.title}-${item}`}>
                     {index < divisionLinks.length && itemIndex === 0 ? (
-                      <Link
-                        to={divisionLinks[index].to}
-                        className="transition hover:text-white"
-                      >
-                        {item}
-                      </Link>
+                      divisionsEnabled ? (
+                        <Link
+                          to={divisionLinks[index].to}
+                          className="transition hover:text-white"
+                        >
+                          {item}
+                        </Link>
+                      ) : (
+                        <span className="cursor-not-allowed text-white/55">{item}</span>
+                      )
                     ) : (
                       <span>{item}</span>
                     )}

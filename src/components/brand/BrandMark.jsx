@@ -10,7 +10,7 @@ export function BrandMark() {
       <img
         src="/logo.png"
         alt="KHANBAS"
-        className="h-12 w-auto max-w-[220px] object-contain transition duration-300 group-hover:brightness-110 sm:h-14 sm:max-w-[280px]"
+        className="h-14 w-auto max-w-[250px] object-contain transition duration-300 group-hover:brightness-110 sm:h-16 sm:max-w-[320px]"
       />
     </Link>
   )

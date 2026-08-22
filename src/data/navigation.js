@@ -1,3 +1,5 @@
+export const divisionsEnabled = false
+
 export const divisionLinks = [
   {
     label: 'Engineering & Contracting',

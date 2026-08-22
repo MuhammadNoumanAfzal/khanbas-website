@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom'
-import { divisionLinks, primaryNavLinks } from '../../data/navigation.js'
+import { divisionsEnabled, divisionLinks, primaryNavLinks } from '../../data/navigation.js'
 
 export function MobileNav({ isOpen, onClose }) {
   if (!isOpen) {
@@ -34,22 +34,31 @@ export function MobileNav({ isOpen, onClose }) {
             Divisions
           </p>
           <div className="grid gap-2">
-            {divisionLinks.map((division) => (
-              <NavLink
-                key={division.to}
-                to={division.to}
-                onClick={onClose}
-                className={({ isActive }) =>
-                  `rounded-2xl px-4 py-3 text-sm transition ${
-                    isActive
-                      ? 'bg-[color:var(--color-gold-soft)]/15 text-[color:var(--color-gold-bright)]'
-                      : 'bg-white/[0.02] text-[color:var(--color-sand)] hover:bg-white/5 hover:text-white'
-                  }`
-                }
-              >
-                {division.label}
-              </NavLink>
-            ))}
+            {divisionLinks.map((division) =>
+              divisionsEnabled ? (
+                <NavLink
+                  key={division.to}
+                  to={division.to}
+                  onClick={onClose}
+                  className={({ isActive }) =>
+                    `rounded-2xl px-4 py-3 text-sm transition ${
+                      isActive
+                        ? 'bg-[color:var(--color-gold-soft)]/15 text-[color:var(--color-gold-bright)]'
+                        : 'bg-white/[0.02] text-[color:var(--color-sand)] hover:bg-white/5 hover:text-white'
+                    }`
+                  }
+                >
+                  {division.label}
+                </NavLink>
+              ) : (
+                <span
+                  key={division.to}
+                  className="cursor-not-allowed rounded-2xl bg-white/[0.02] px-4 py-3 text-sm text-white/38"
+                >
+                  {division.label}
+                </span>
+              ),
+            )}
           </div>
         </div>
       </div>
