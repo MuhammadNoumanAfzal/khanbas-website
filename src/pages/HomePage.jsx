@@ -6,15 +6,38 @@ import { WhoWeAreSection } from '../components/home/WhoWeAreSection.jsx'
 import { WhyKhanbasSection } from '../components/home/WhyKhanbasSection.jsx'
 import { PageShell } from '../components/page/PageShell.jsx'
 
+const heroSlides = [
+  {
+    eyebrow: 'Multidisciplinary Solutions | Saudi Arabia',
+    title: 'One Partner for Integrated Project Delivery.',
+    description:
+      'KHANBAS connects engineering, technology, logistics, and business support into one reliable structure for projects that demand speed, clarity, and disciplined execution.',
+    accent: 'Integrated corporate capability',
+    backgroundImage: '/hero1.jpeg',
+  },
+  {
+    eyebrow: 'Operational Support | Saudi Arabia',
+    title: 'Built to Support Sites, Systems, and Operations.',
+    description:
+      'From infrastructure and fleet support to smart systems and procurement, KHANBAS helps organizations move from planning to delivery with confidence and control.',
+    accent: 'Practical end-to-end support',
+    backgroundImage: '/hero2.jpeg',
+  },
+  {
+    eyebrow: 'Cross-Division Capability | Saudi Arabia',
+    title: 'Structured Solutions for Complex Business Needs.',
+    description:
+      'Our divisions work together to deliver coordinated services across construction, technology, transport, and operations with a consistent standard of quality.',
+    accent: 'Coordinated multi-division execution',
+    backgroundImage: '/hero3.jpeg',
+  },
+]
+
 export function HomePage() {
   return (
     <>
       <PageShell
-        eyebrow="Multidisciplinary Solutions | Saudi Arabia"
-        title="One Partner. Multiple Capabilities."
-        description="A refined home page shell for KHANBAS with routing, strong brand presence, and visual balance built around engineering, technology, logistics, and business services."
-        accent="Balanced corporate positioning"
-        backgroundImage="https://images.unsplash.com/photo-1513828583688-c52646db42da?auto=format&fit=crop&w=1600&q=80"
+        slides={heroSlides}
       >
         <div className="flex flex-wrap gap-4">
           <Link
