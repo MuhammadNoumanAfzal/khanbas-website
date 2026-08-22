@@ -49,12 +49,12 @@ export function WhyKhanbasSection() {
               {reasons.map((reason) => (
                 <div
                   key={reason.title}
-                  className="rounded-[1.25rem] border border-black/8 bg-white/55 p-4"
+                  className="rounded-[1.25rem] border border-[#35506c]/55 bg-[linear-gradient(180deg,#1a2c3d_0%,#203447_100%)] p-4 shadow-[0_18px_34px_rgba(12,26,40,0.22)]"
                 >
-                  <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#ad782c]">
+                  <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#d29a43]">
                     {reason.title}
                   </p>
-                  <p className="mt-2 text-sm leading-6 text-[#514538]">
+                  <p className="mt-2 text-sm leading-6 text-[#f3f7fb]">
                     {reason.text}
                   </p>
                 </div>
@@ -79,21 +79,21 @@ export function WhyKhanbasSection() {
               {scenarios.map((scenario, index) => (
                 <article
                   key={scenario.title}
-                  className="overflow-hidden rounded-[1.7rem] border border-black/8 bg-[rgba(255,255,255,0.56)] shadow-[0_16px_34px_rgba(47,34,18,0.06)]"
+                  className="overflow-hidden rounded-[1.7rem] border border-[#35506c]/50 bg-[linear-gradient(180deg,#1b2e40_0%,#22384c_100%)] shadow-[0_20px_38px_rgba(12,26,40,0.18)]"
                 >
                   <div className="grid gap-4 p-4 sm:p-5 lg:grid-cols-[auto_1fr] lg:items-start">
-                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#c9973d]/20 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[#a87124]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#5b7390]/70 bg-[rgba(255,255,255,0.04)] text-sm font-semibold text-[#d4a04a]">
                       0{index + 1}
                     </div>
                     <div>
-                      <h4 className="font-display text-[1.95rem] leading-none text-[#18120d]">
+                      <h4 className="font-display text-[1.95rem] leading-none text-[#f4f7fb]">
                         {scenario.title}
                       </h4>
                       <div className="mt-3 flex flex-wrap gap-2">
                         {scenario.lines.map((line) => (
                           <span
                             key={line}
-                            className="rounded-full border border-black/8 bg-white/72 px-3 py-1.5 text-[0.78rem] text-[#5a4d3f]"
+                            className="rounded-full border border-[#4d6886]/60 bg-[rgba(255,255,255,0.05)] px-3 py-1.5 text-[0.78rem] text-[#e7eef5]"
                           >
                             {line}
                           </span>
