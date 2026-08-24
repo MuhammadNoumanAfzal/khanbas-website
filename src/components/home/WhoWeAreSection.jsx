@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { SlideRight } from '../../utility/animation'
 
 const collageImages = [
   {
@@ -32,9 +34,15 @@ export function WhoWeAreSection() {
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
               Who We Are
             </p>
-            <h2 className="mt-4 max-w-lg font-display text-[2.8rem] leading-[0.92] text-[#16110c] sm:text-5xl">
-              Built to Support More.
-            </h2>
+           <motion.h2
+  variants={SlideRight(0.7)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  className="mt-4 max-w-lg font-display text-[2.8rem] leading-[0.92] text-[#16110c] sm:text-5xl"
+>
+  Built to Support More.
+</motion.h2>
             <div className="mt-5 h-px w-20 bg-[linear-gradient(90deg,rgba(201,151,61,0.95),rgba(201,151,61,0))]" />
             <p className="mt-6 max-w-lg text-[1.05rem] leading-8 text-[#3d3126]">
               KHANBAS is a multidisciplinary Saudi company providing
@@ -82,7 +90,10 @@ export function WhoWeAreSection() {
             <div className="pointer-events-none absolute -left-4 -top-4 h-20 w-20 rounded-full bg-[rgba(201,151,61,0.12)] blur-2xl" />
             <div className="pointer-events-none absolute -bottom-4 right-6 h-24 w-24 rounded-full bg-[rgba(34,56,79,0.18)] blur-2xl" />
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div 
+            
+            
+            className="grid gap-3 sm:grid-cols-2">
               {collageImages.map((image) => (
                 <article
                   key={image.label}
@@ -111,3 +122,4 @@ export function WhoWeAreSection() {
     </section>
   )
 }
+export default WhoWeAreSection
