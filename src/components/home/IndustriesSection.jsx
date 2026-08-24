@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { SlideLeft, SlideRight } from '../../utility/animation'
+
 const industries = [
   {
     title: 'Construction & Infrastructure',
@@ -30,7 +33,13 @@ export function IndustriesSection() {
     <section className="bg-[#091119] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
       <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.88fr_1.12fr] lg:gap-8">
         <div className="flex flex-col justify-between py-2">
-          <div className="max-w-xl">
+          <motion.div 
+          variants={SlideRight(0.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+
+          className="max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
               Industries We Support
             </p>
@@ -42,9 +51,14 @@ export function IndustriesSection() {
               engineering, logistics, technology, and operational support in
               different business environments.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="mt-6 max-w-xl">
+          <motion.div
+          variants={SlideRight(0.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+          className="mt-6 max-w-xl">
             <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
               Sector Range
             </p>
@@ -52,10 +66,18 @@ export function IndustriesSection() {
               Physical operations, infrastructure, transport, and corporate
               support.
             </p>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="grid gap-3 sm:grid-cols-2">
+
+
+        <motion.div
+        variants={SlideLeft(0.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+        
+        className="grid gap-3 sm:grid-cols-2">
           {industries.map((industry, index) => (
             <article
               key={industry.title}
@@ -89,7 +111,7 @@ export function IndustriesSection() {
               </div>
             </article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

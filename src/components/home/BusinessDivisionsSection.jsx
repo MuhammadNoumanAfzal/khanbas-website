@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion'
+import { SlideLeft, SlideRight } from '../../utility/animation'
 
 const divisions = [
   {
@@ -69,21 +71,55 @@ export function BusinessDivisionsSection() {
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-wrap items-end justify-between gap-5 border-t border-white/8 pt-7 sm:pt-8">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+            <motion.p 
+            variants={SlideRight(0.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+            className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
               Our Business Divisions
-            </p>
-            <h2 className="mt-3 font-display text-[2.7rem] leading-[0.94] text-white sm:text-[3.2rem]">
+            </motion.p>
+
+
+            <motion.h2
+            variants={SlideRight(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+   className="mt-3 font-display text-[2.7rem] leading-[0.94] text-white sm:text-[3.2rem]">
               Specialized Capabilities. One KHANBAS.
-            </h2>
+            </motion.h2>
+
+
           </div>
-          <p className="max-w-2xl text-[0.98rem] leading-7 text-[color:var(--color-mist)] sm:text-base">
+
+
+          <motion.p 
+          variants={SlideRight(0.7)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+          className="max-w-2xl text-[0.98rem] leading-7 text-[color:var(--color-mist)] sm:text-base">
             Four focused divisions serving different requirements while working
             together when projects demand more. Each division carries equal
             visual weight to keep the KHANBAS story balanced.
-          </p>
+          </motion.p>
+
+
         </div>
 
-        <div className="mt-7 grid gap-4 lg:grid-cols-2">
+
+
+
+
+
+
+        <motion.div
+        variants={SlideLeft(0.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+         className="mt-7 grid gap-4 lg:grid-cols-2">
           {divisions.map((division, index) => (
             <article
               key={division.title}
@@ -149,7 +185,7 @@ export function BusinessDivisionsSection() {
               />
             </article>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

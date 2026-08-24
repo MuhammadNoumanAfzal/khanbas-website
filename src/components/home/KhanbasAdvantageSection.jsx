@@ -1,3 +1,7 @@
+
+import { motion } from 'framer-motion'
+import { SlideLeft, SlideRight } from '../../utility/animation'
+
 const advantageFlow = [
   { title: 'Engineering', action: 'Build & Maintain' },
   { title: 'Logistics', action: 'Move & Equip' },
@@ -20,21 +24,49 @@ export function KhanbasAdvantageSection() {
         <div className="overflow-hidden rounded-[2.25rem] border border-black/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.58)_0%,rgba(255,255,255,0.36)_100%)] shadow-[0_20px_46px_rgba(47,34,18,0.1)] backdrop-blur">
           <div className="grid gap-8 px-5 py-6 sm:px-6 sm:py-7 lg:grid-cols-[0.86fr_1.14fr] lg:px-8 lg:py-8">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
+
+
+              <motion.p
+              variants={SlideRight(0.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+              className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
                 The Khanbas Advantage
-              </p>
-              <h2 className="mt-3 font-display text-[2.7rem] leading-[0.92] text-[#18120d] sm:text-[3.25rem]">
+              </motion.p>
+
+
+              <motion.h2
+              variants={SlideRight(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+              className="mt-3 font-display text-[2.7rem] leading-[0.92] text-[#18120d] sm:text-[3.25rem]">
                 More Capability. Less Complexity.
-              </h2>
-              <p className="mt-4 max-w-lg text-[1rem] leading-7 text-[#4c4033] sm:text-[1.05rem]">
+              </motion.h2>
+
+
+              <motion.p
+             variants={SlideRight(0.7)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+              className="mt-4 max-w-lg text-[1rem] leading-7 text-[#4c4033] sm:text-[1.05rem]">
                 Large projects rarely depend on one service alone. KHANBAS
                 brings multiple disciplines together so clients can coordinate
                 more of their requirements through one partner.
-              </p>
+              </motion.p>
+
 
               <div className="mt-6 space-y-3">
                 {advantageFlow.map((item, index) => (
-                  <div key={item.title} className="flex items-center gap-4">
+                  <motion.div
+                  variants={SlideRight(0.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+                  
+                  key={item.title} className="flex items-center gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c9973d]/25 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[#a87124]">
                       0{index + 1}
                     </div>
@@ -46,17 +78,30 @@ export function KhanbasAdvantageSection() {
                         {item.action}
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
-              <p className="mt-6 text-[0.82rem] uppercase tracking-[0.26em] text-[#a87124]">
+              <motion.p
+               variants={SlideRight(0.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+              className="mt-6 text-[0.82rem] uppercase tracking-[0.26em] text-[#a87124]">
                 One relationship. Multiple capabilities.
-              </p>
+              </motion.p>
             </div>
 
             <div>
-              <div className="relative overflow-hidden rounded-[1.85rem] border border-white/10 bg-black">
+
+
+
+              <motion.div 
+              variants={SlideLeft(0.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+              className="relative overflow-hidden rounded-[1.85rem] border border-white/10 bg-black">
                 <img
                   src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80"
                   alt="Integrated commercial project environment"
@@ -80,12 +125,22 @@ export function KhanbasAdvantageSection() {
                     </div>
                   </div>
                 ))}
-              </div>
+              </motion.div>
 
-              <p className="mt-4 max-w-2xl text-sm leading-6 text-[#675d50]">
+
+
+
+
+
+              <motion.p
+              variants={SlideRight(0.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: false, amount: 0.2 }}
+               className="mt-4 max-w-2xl text-sm leading-6 text-[#675d50]">
                 Whether a requirement involves one division or several, KHANBAS
                 can bring the right capabilities around the project.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
