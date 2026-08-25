@@ -37,7 +37,7 @@ export function IndustriesSection() {
           variants={SlideRight(0.2)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
 
           className="max-w-xl">
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
@@ -57,7 +57,7 @@ export function IndustriesSection() {
           variants={SlideRight(0.4)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
           className="mt-6 max-w-xl">
             <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
               Sector Range
@@ -75,7 +75,7 @@ export function IndustriesSection() {
         variants={SlideLeft(0.2)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
         
         className="grid gap-3 sm:grid-cols-2">
           {industries.map((industry, index) => (

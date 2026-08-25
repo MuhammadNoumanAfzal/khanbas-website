@@ -81,7 +81,7 @@ export function AboutPage() {
           variants={SlideRight(0.5)}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
+          viewport={{ once: true, amount: 0.2 }}
           className="flex flex-wrap gap-4"
         >
           <Link
@@ -120,7 +120,7 @@ export function AboutPage() {
                 variants={SlideRight(0.2)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="text-sm font-semibold uppercase tracking-[0.25em] text-[#8b641f]"
               >
                 Who We Are
@@ -131,7 +131,7 @@ export function AboutPage() {
               variants={SlideRight(0.4)}
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: false, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.2 }}
               className="font-display text-[2.4rem] font-semibold leading-[1.05] text-[#132538] sm:text-[3rem] lg:text-[3.6rem]"
             >
               A broader business structure,
@@ -151,7 +151,7 @@ export function AboutPage() {
                 variants={SlideRight(0.6)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="mb-4 flex items-center gap-3"
               >
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-[#b9863f]/50 bg-white/70 text-xs font-bold text-[#8b641f]">
@@ -167,7 +167,7 @@ export function AboutPage() {
                 variants={SlideLeft(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="max-w-xl text-base leading-7 text-[#354b5c]"
               >
                 KHANBAS is a Saudi multidisciplinary company providing engineering,
@@ -184,7 +184,7 @@ export function AboutPage() {
                             variants={SlideLeft(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               
                className="grid max-w-xl gap-x-6 gap-y-3 sm:grid-cols-2">
                 {highlights.map((item, index) => (
@@ -208,7 +208,7 @@ export function AboutPage() {
               variants={SlideRight(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               className="relative mt-6 max-w-xl border border-[#cbb991] bg-white/60 p-4 shadow-md backdrop-blur-sm">
 
                 <div className="absolute left-0 top-0 h-full w-1 bg-[#b9863f]" />
@@ -233,7 +233,7 @@ export function AboutPage() {
                     variants={SlideLeft(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             className="relative min-h-[370px]">
 
               {/* Main Image */}
@@ -325,7 +325,7 @@ export function AboutPage() {
             variants={SlideRight(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             className="max-w-4xl">
 
               <div className="mb-3 flex items-center gap-3">
@@ -349,7 +349,7 @@ export function AboutPage() {
             variants={SlideLeft(0.2)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             className="max-w-md text-sm leading-7 text-[#b5c4d0] lg:justify-self-end">
               A disciplined long-term view supported by practical delivery across
               engineering, technology, logistics, and business services.
@@ -365,7 +365,7 @@ export function AboutPage() {
             variants={SlideRight(0.4)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             className="group relative overflow-hidden border border-[#3a5269] bg-[linear-gradient(145deg,#152838_0%,#1b3042_100%)] p-6 shadow-[0_24px_48px_rgba(0,0,0,0.2)] transition duration-300 hover:-translate-y-1 hover:border-[#b9863f]/60">
 
               <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#c9973d]/10 blur-2xl transition duration-500 group-hover:bg-[#c9973d]/20" />
@@ -410,7 +410,7 @@ export function AboutPage() {
             variants={SlideLeft(0.4)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             className="group relative overflow-hidden border border-white/10 bg-white/[0.035] p-6 backdrop-blur-md transition duration-300 hover:-translate-y-1 hover:border-[#c9973d]/30">
 
               <div className="absolute inset-y-0 left-0 w-[2px] bg-gradient-to-b from-transparent via-[#c9973d] to-transparent" />
@@ -516,7 +516,7 @@ export function AboutPage() {
             variants={SlideLeft(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                  className="mb-3 flex items-center gap-3">
               <span className="h-px w-10 bg-[#b9863f]" />
 
@@ -529,7 +529,7 @@ export function AboutPage() {
  variants={SlideRight(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             
              className="font-display text-[2.45rem] font-medium leading-[1] text-[#132538] sm:text-[2.9rem]">
               Specialists when you need them.
@@ -542,7 +542,7 @@ export function AboutPage() {
              variants={SlideLeft(0.7)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
              className="mt-4 max-w-2xl text-base leading-7 text-[#405565]">
               Each KHANBAS division focuses on its own area of expertise. When a
               requirement crosses disciplines, those capabilities can work together
@@ -554,7 +554,7 @@ export function AboutPage() {
              variants={SlideLeft(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
             className="mt-6 grid gap-3">
 
               {principles.map((item, index) => (
@@ -593,7 +593,7 @@ export function AboutPage() {
            variants={SlideBottom(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
           className="relative flex min-h-[390px] items-center justify-center overflow-hidden border border-[#d5c29d]/60 bg-[linear-gradient(180deg,rgba(249,244,235,0.95),rgba(239,229,211,0.95))] p-6 shadow-[0_24px_50px_rgba(41,31,17,0.1)]">
 
             <div className="absolute h-32 w-32 rounded-full border border-[#c5aa7b]/45" />
@@ -684,7 +684,7 @@ export function AboutPage() {
            variants={SlideRight(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
           
           className="mb-8 max-w-3xl">
 
@@ -710,7 +710,7 @@ export function AboutPage() {
            variants={SlideLeft(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
           className="grid gap-4 md:grid-cols-2">
 
             {capabilityGroups.map((group, index) => (
@@ -792,7 +792,7 @@ export function AboutPage() {
                variants={SlideRight(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               className="group relative min-h-[260px] overflow-hidden shadow-[0_22px_45px_rgba(39,30,17,0.14)] sm:min-h-[330px]">
 
                 <img
@@ -821,7 +821,7 @@ export function AboutPage() {
                  variants={SlideBottom(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 className="group relative min-h-[125px] overflow-hidden shadow-[0_18px_35px_rgba(39,30,17,0.1)] sm:min-h-[158px]">
                   <img
                     src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=85"
@@ -840,7 +840,7 @@ export function AboutPage() {
                  variants={SlideUp(0.2)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
                 
                 className="group relative min-h-[125px] overflow-hidden shadow-[0_18px_35px_rgba(39,30,17,0.1)] sm:min-h-[158px]">
                   <img
@@ -881,7 +881,7 @@ export function AboutPage() {
                variants={SlideLeft(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               
               className="mb-3 flex items-center gap-3">
                 <span className="h-px w-10 bg-[#b9863f]" />
@@ -897,7 +897,7 @@ export function AboutPage() {
                variants={SlideLeft(0.7)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               className="font-display text-[2.7rem] font-medium leading-[0.98] text-[#132538] sm:text-[3.35rem]">
                 One relationship.
                 <span className="block text-[#9d6c24]">
@@ -910,7 +910,7 @@ export function AboutPage() {
                  variants={SlideLeft(0.8)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               className="mt-5 max-w-2xl text-base leading-7 text-[#405565]">
                 KHANBAS is structured to help clients access more than one type of
                 support without losing clarity. Some requirements stay within one
@@ -922,7 +922,7 @@ export function AboutPage() {
                variants={SlideLeft(0.2)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               className="mt-4 max-w-2xl text-base leading-7 text-[#405565]">
                 The result is a balanced multidisciplinary company able to support
                 several parts of a project or operation through one trusted partner.
@@ -936,7 +936,7 @@ export function AboutPage() {
                variants={SlideRight(0.5)}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: false, amount: 0.2 }}
+                viewport={{ once: true, amount: 0.2 }}
               className="flex flex-wrap gap-3">
 
                 {/* Primary CTA */}

@@ -30,7 +30,7 @@ export function KhanbasAdvantageSection() {
               variants={SlideRight(0.2)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
               className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
                 The Khanbas Advantage
               </motion.p>
@@ -40,7 +40,7 @@ export function KhanbasAdvantageSection() {
               variants={SlideRight(0.5)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
               className="mt-3 font-display text-[2.7rem] leading-[0.92] text-[#18120d] sm:text-[3.25rem]">
                 More Capability. Less Complexity.
               </motion.h2>
@@ -50,7 +50,7 @@ export function KhanbasAdvantageSection() {
              variants={SlideRight(0.7)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
               className="mt-4 max-w-lg text-[1rem] leading-7 text-[#4c4033] sm:text-[1.05rem]">
                 Large projects rarely depend on one service alone. KHANBAS
                 brings multiple disciplines together so clients can coordinate
@@ -64,7 +64,7 @@ export function KhanbasAdvantageSection() {
                   variants={SlideRight(0.2)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
                   
                   key={item.title} className="flex items-center gap-4">
                     <div className="flex h-10 w-10 items-center justify-center rounded-full border border-[#c9973d]/25 bg-[rgba(201,151,61,0.08)] text-sm font-semibold text-[#a87124]">
@@ -86,7 +86,7 @@ export function KhanbasAdvantageSection() {
                variants={SlideRight(0.2)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
               className="mt-6 text-[0.82rem] uppercase tracking-[0.26em] text-[#a87124]">
                 One relationship. Multiple capabilities.
               </motion.p>
@@ -100,7 +100,7 @@ export function KhanbasAdvantageSection() {
               variants={SlideLeft(0.4)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
               className="relative overflow-hidden rounded-[1.85rem] border border-white/10 bg-black">
                 <img
                   src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80"
@@ -136,7 +136,7 @@ export function KhanbasAdvantageSection() {
               variants={SlideRight(0.3)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
                className="mt-4 max-w-2xl text-sm leading-6 text-[#675d50]">
                 Whether a requirement involves one division or several, KHANBAS
                 can bring the right capabilities around the project.

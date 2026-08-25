@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { PageShell } from '../components/page/PageShell.jsx'
+import { motion } from 'framer-motion'
+import { SlideLeft, SlideRight ,SlideUp ,SlideBottom } from '../utility/animation.js'
 
 const contactDetails = [
   {
@@ -35,7 +37,12 @@ export function ContactPage() {
         accent="Client inquiry experience"
         backgroundImage="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=80"
       >
-        <div className="flex flex-wrap gap-4">
+        <motion.div
+              variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        className="flex flex-wrap gap-4">
           <a
             href="mailto:contact@khanbas.com"
             className="rounded-full border border-[color:var(--color-gold-soft)]/60 bg-[linear-gradient(135deg,rgba(244,205,112,0.95),rgba(171,124,42,0.95))] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] transition hover:-translate-y-0.5"
@@ -48,7 +55,7 @@ export function ContactPage() {
           >
             View Our Work
           </Link>
-        </div>
+        </motion.div>
       </PageShell>
 
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#0a121a_0%,#0d1823_54%,#0a131c_100%)] px-4 py-12 sm:px-6 sm:py-14 lg:px-8 lg:py-16">
@@ -56,19 +63,45 @@ export function ContactPage() {
 
         <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <div className="max-w-xl">
-            <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+            <motion.p
+             variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
               Contact Details
-            </p>
-            <h2 className="mt-3 font-display text-[2.8rem] leading-[0.92] text-white sm:text-[3.2rem]">
+            </motion.p>
+
+
+            <motion.h2 
+             variants={SlideRight(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            className="mt-3 font-display text-[2.8rem] leading-[0.92] text-white sm:text-[3.2rem]">
               Let&apos;s discuss your requirement properly.
-            </h2>
-            <p className="mt-5 text-base leading-8 text-[#c5d1dc]">
+            </motion.h2>
+
+
+            <motion.p
+             variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            className="mt-5 text-base leading-8 text-[#c5d1dc]">
               Use the form for project inquiries, service requests, or early
               coordination. If you prefer a direct route, our main contact
               details are listed here for immediate access.
-            </p>
+            </motion.p>
 
-            <div className="mt-8 space-y-6">
+            <motion.div
+            
+             variants={SlideLeft(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            
+            className="mt-8 space-y-6">
               {contactDetails.map((item) => (
                 <div
                   key={item.label}
@@ -91,9 +124,17 @@ export function ContactPage() {
                   )}
                 </div>
               ))}
-            </div>
+            </motion.div>
 
-            <div className="mt-10">
+
+
+
+            <motion.div 
+             variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            className="mt-10">
               <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
                 Areas of Support
               </p>
@@ -107,8 +148,9 @@ export function ContactPage() {
                   </span>
                 ))}
               </div>
-            </div>
+            </motion.div>
           </div>
+
 
           <div className="relative">
             <div className="absolute -left-6 top-8 hidden h-28 w-28 rounded-full bg-[rgba(201,151,61,0.14)] blur-3xl lg:block" />
@@ -119,7 +161,12 @@ export function ContactPage() {
               <div className="absolute right-0 top-0 h-40 w-40 bg-[radial-gradient(circle,rgba(201,151,61,0.16),transparent_65%)]" />
 
               <div className="grid gap-8 px-5 py-6 sm:px-7 sm:py-8 lg:grid-cols-[0.34fr_1fr] lg:px-8">
-                <div className="border-b border-[#ccb48d]/60 pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
+                <motion.div
+                 variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="border-b border-[#ccb48d]/60 pb-6 lg:border-b-0 lg:border-r lg:pb-0 lg:pr-6">
                   <p className="text-[0.72rem] uppercase tracking-[0.32em] text-[#9c6c26]">
                     Inquiry Form
                   </p>
@@ -131,36 +178,73 @@ export function ContactPage() {
                     right team with clear next steps.
                   </p>
 
-                  <div className="mt-6 space-y-3">
-                    <div className="border-b border-[#d7c3a2]/70 pb-3">
+                  <motion.div
+                   variants={SlideLeft(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                  className="mt-6 space-y-3">
+                    <motion.div
+                     variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                    className="border-b border-[#d7c3a2]/70 pb-3">
                       <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9c6c26]">
                         Response
                       </p>
                       <p className="mt-1 text-sm font-medium text-[#193147]">
                         Business-day follow-up
                       </p>
-                    </div>
-                    <div className="border-b border-[#d7c3a2]/70 pb-3">
+                    </motion.div>
+
+
+                    <motion.div
+                     variants={SlideRight(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                    className="border-b border-[#d7c3a2]/70 pb-3">
                       <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9c6c26]">
                         Best For
                       </p>
                       <p className="mt-1 text-sm font-medium text-[#193147]">
                         Projects, service requests, and early coordination
                       </p>
-                    </div>
-                    <div>
+                    </motion.div>
+
+
+                    <motion.div
+                     variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                    >
                       <p className="text-[0.68rem] uppercase tracking-[0.24em] text-[#9c6c26]">
                         Approach
                       </p>
                       <p className="mt-1 text-sm font-medium text-[#193147]">
                         Structured, discreet, and professional
                       </p>
-                    </div>
-                  </div>
-                </div>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
 
-                <div>
-                  <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+
+
+
+                <motion.div>
+
+
+
+
+                  <motion.div
+                   variants={SlideRight(0.2)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                  
+                  className="mb-8 flex flex-wrap items-end justify-between gap-4">
                     <div>
                       <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[#9c6c26]">
                         Contact Request
@@ -173,10 +257,17 @@ export function ContactPage() {
                       A concise message helps our team review your request faster
                       and respond with better direction.
                     </p>
-                  </div>
+                  </motion.div>
+
+
 
                   <form className="grid gap-5">
-                    <div className="grid gap-5 md:grid-cols-2">
+                    <motion.div
+                     variants={SlideLeft(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                    className="grid gap-5 md:grid-cols-2">
                       <label className="group block">
                         <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
                           Full Name
@@ -198,9 +289,16 @@ export function ContactPage() {
                           className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] group-hover:border-[#b88a48]"
                         />
                       </label>
-                    </div>
+                    </motion.div>
 
-                    <div className="grid gap-5 md:grid-cols-2">
+
+
+                    <motion.div
+                     variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                    className="grid gap-5 md:grid-cols-2">
                       <label className="group block">
                         <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
                           Email
@@ -222,9 +320,14 @@ export function ContactPage() {
                           className="w-full cursor-text border-0 border-b border-[#cfba97] bg-transparent px-0 py-3 text-base text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] group-hover:border-[#b88a48]"
                         />
                       </label>
-                    </div>
+                    </motion.div>
 
-                    <label className="group block">
+                    <motion.label
+                     variants={SlideRight(0.6)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                    className="group block">
                       <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
                         Service Type
                       </span>
@@ -234,9 +337,14 @@ export function ContactPage() {
                           <option key={item}>{item}</option>
                         ))}
                       </select>
-                    </label>
+                    </motion.label>
 
-                    <label className="group block">
+                    <motion.label
+                            variants={SlideLeft(0.6)}
+                                           initial="hidden"
+                                           whileInView="visible"
+                                           viewport={{ once: true, amount: 0.2 }}
+                    className="group block">
                       <span className="mb-2 block text-[0.72rem] uppercase tracking-[0.24em] text-[#8d6730]">
                         Project or Inquiry
                       </span>
@@ -245,9 +353,14 @@ export function ContactPage() {
                         placeholder="Please share your requirement, project stage, location, and the type of support you are looking for."
                         className="w-full resize-none cursor-text border border-[#d6c09b] bg-[rgba(255,255,255,0.38)] px-4 py-4 text-base leading-7 text-[#12253a] outline-none transition duration-300 placeholder:text-[#8b99a5] focus:border-[#9c6c26] focus:bg-[rgba(255,255,255,0.56)] group-hover:border-[#b88a48]"
                       />
-                    </label>
+                    </motion.label>
 
-                    <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
+                    <motion.div
+                     variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                    className="flex flex-wrap items-center justify-between gap-4 pt-2">
                       <p className="max-w-md text-sm leading-7 text-[#5a6b79]">
                         Suitable for new project discussions, service requests,
                         and early coordination across KHANBAS divisions.
@@ -261,9 +374,9 @@ export function ContactPage() {
                           +
                         </span>
                       </button>
-                    </div>
+                    </motion.div>
                   </form>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>

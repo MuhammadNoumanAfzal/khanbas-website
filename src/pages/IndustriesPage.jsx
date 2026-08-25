@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { PageShell } from '../components/page/PageShell.jsx'
+import { motion } from 'framer-motion'
+import { SlideLeft, SlideRight ,SlideUp ,SlideBottom } from '../utility/animation.js'
 
 const industryCards = [
   {
@@ -80,7 +82,13 @@ export function IndustriesPage() {
         accent="Sector-focused presentation"
         backgroundImage="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80"
       >
-        <div className="flex flex-wrap gap-4">
+        <motion.div
+           variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+        className="flex flex-wrap gap-4">
           <Link
             to="/engineering-contracting"
             className="rounded-full border border-[color:var(--color-gold-soft)]/60 bg-[linear-gradient(135deg,rgba(244,205,112,0.95),rgba(171,124,42,0.95))] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] transition hover:-translate-y-0.5"
@@ -93,27 +101,50 @@ export function IndustriesPage() {
           >
             Talk to Our Team
           </Link>
-        </div>
+        </motion.div>
       </PageShell>
 
       <section className="bg-[linear-gradient(180deg,#f4eddf_0%,#eadcc7_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.92fr_1.08fr] lg:items-start">
           <div>
-            <p className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
+            <motion.p
+             variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            
+            className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
               Sector Perspective
-            </p>
-            <h2 className="mt-3 font-display text-[2.55rem] leading-[0.92] text-[#132538] sm:text-[3.15rem]">
+            </motion.p>
+            <motion.h2
+             variants={SlideRight(0.7)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            className="mt-3 font-display text-[2.55rem] leading-[0.92] text-[#132538] sm:text-[3.15rem]">
               Industries with different needs, supported through one coordinated structure.
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[#556674]">
+            </motion.h2>
+
+            <motion.p
+             variants={SlideLeft(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            
+            className="mt-5 max-w-2xl text-base leading-8 text-[#556674]">
               KHANBAS is built to support a wide range of sectors without forcing
               every requirement into one service model. Some industries need site
               execution, some need technology or fleet support, and others require
               a broader combination of capabilities.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <motion.div
+                 variants={SlideBottom(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+          className="grid gap-4 sm:grid-cols-3">
             {deliveryPoints.map((point) => (
               <div
                 key={point.title}
@@ -130,7 +161,7 @@ export function IndustriesPage() {
                 </p>
               </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -145,16 +176,28 @@ export function IndustriesPage() {
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(6,10,14,0.1),rgba(6,10,14,0.88)_100%)]" />
             <div className="relative flex h-full flex-col justify-between p-6 sm:p-7">
-              <div className="flex items-center justify-between gap-4">
+              <motion.div
+               variants={SlideRight(0.2)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.2 }}
+              className="flex items-center justify-between gap-4">
                 <span className="rounded-full border border-white/14 bg-black/20 px-4 py-2 text-[0.72rem] uppercase tracking-[0.24em] text-[color:var(--color-gold-bright)] backdrop-blur-sm">
                   Featured Industry
                 </span>
                 <span className="text-sm font-medium text-[#d9e4ec]">
                   {featuredIndustry.number}
                 </span>
-              </div>
+              </motion.div>
 
-              <div className="max-w-2xl">
+
+
+              <motion.div 
+                       variants={SlideRight(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              className="max-w-2xl">
                 <p className="text-[0.72rem] uppercase tracking-[0.3em] text-[color:var(--color-gold-bright)]">
                   {featuredIndustry.title}
                 </p>
@@ -164,59 +207,112 @@ export function IndustriesPage() {
                 <p className="mt-4 max-w-2xl text-base leading-8 text-[#d4dfe7]">
                   {featuredIndustry.text}
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
 
           <div className="grid gap-4">
             <div className="border border-white/10 bg-white/[0.03] p-6 backdrop-blur">
-              <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
+              <motion.p
+               variants={SlideLeft(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
                 Core Capabilities
-              </p>
+              </motion.p>
+
+              
               <div className="mt-5 flex flex-wrap gap-2.5">
                 {featuredIndustry.capabilities.map((item) => (
-                  <span
+                  <motion.span
+                   variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
                     key={item}
                     className="rounded-full border border-[#3f576f] bg-[rgba(255,255,255,0.03)] px-4 py-2 text-sm text-[#d4dee7]"
                   >
                     {item}
-                  </span>
+                  </motion.span>
                 ))}
               </div>
             </div>
 
             <div className="border border-[#38516b] bg-[linear-gradient(180deg,#152635_0%,#1a2f40_100%)] p-6 shadow-[0_20px_40px_rgba(0,0,0,0.16)]">
-              <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
+              <motion.p
+                variants={SlideLeft(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
                 Why It Matters
-              </p>
-              <p className="mt-4 text-base leading-8 text-[#d5dfe8]">
+              </motion.p>
+
+
+              <motion.p 
+               variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              
+              className="mt-4 text-base leading-8 text-[#d5dfe8]">
                 Industries rarely depend on one service alone. KHANBAS can align
                 construction, transport, equipment, technology, and support
                 functions around the actual operating environment.
-              </p>
+              </motion.p>
             </div>
           </div>
         </div>
       </section>
 
+
+
+
       <section className="bg-[linear-gradient(180deg,#efe4d1_0%,#e8dbc6_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="mx-auto max-w-7xl">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div className="max-w-3xl">
-              <p className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
+             
+              <motion.p
+                variants={SlideRight(0.2)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
                 Industry Breakdown
-              </p>
-              <h2 className="mt-3 font-display text-[2.55rem] leading-[0.92] text-[#132538] sm:text-[3.1rem]">
+              </motion.p>
+
+
+
+              <motion.h2
+                    variants={SlideLeft(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              
+              className="mt-3 font-display text-[2.55rem] leading-[0.92] text-[#132538] sm:text-[3.1rem]">
                 Distinct sectors, each with a different support pattern.
-              </h2>
+              </motion.h2>
             </div>
-            <p className="max-w-lg text-sm leading-7 text-[#5a6b79]">
+            <motion.p 
+                 variants={SlideRight(0.6)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            
+            className="max-w-lg text-sm leading-7 text-[#5a6b79]">
               The page is structured to show range without making every industry
               look identical.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
+          <motion.div
+                 variants={SlideLeft(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+          className="grid gap-5 md:grid-cols-2">
             {remainingIndustries.map((industry, index) => (
               <article
                 key={industry.title}
@@ -252,7 +348,7 @@ export function IndustriesPage() {
                 </div>
               </article>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -260,41 +356,109 @@ export function IndustriesPage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(201,151,61,0.1),transparent_22%),radial-gradient(circle_at_right_bottom,rgba(45,76,109,0.16),transparent_28%)]" />
         <div className="relative mx-auto max-w-7xl">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
-            <div>
-              <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
+            <motion.div
+             variants={SlideBottom(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}   
+            >
+
+
+              <motion.p
+               variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
                 One Industry View
-              </p>
-              <h2 className="mt-3 font-display text-[2.5rem] leading-[0.92] text-white sm:text-[3rem]">
+              </motion.p>
+
+
+              <motion.h2
+               variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              className="mt-3 font-display text-[2.5rem] leading-[0.92] text-white sm:text-[3rem]">
                 Different sectors. One multidisciplinary business story.
-              </h2>
-              <p className="mt-5 max-w-2xl text-base leading-8 text-[#c7d4df]">
+              </motion.h2>
+
+
+              <motion.p
+               variants={SlideRight(0.7)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+              
+              className="mt-5 max-w-2xl text-base leading-8 text-[#c7d4df]">
                 The industry page should make the KHANBAS structure easy to
                 understand. Clients should be able to see where our capabilities
                 fit, how the divisions connect, and why one coordinated partner can
                 support multiple requirements more effectively.
-              </p>
-            </div>
+              </motion.p>
+            </motion.div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+
+
+
+            <motion.div 
+              variants={SlideUp(0.2)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+            className="grid gap-4 sm:grid-cols-2">
               <div className="border border-white/10 bg-white/[0.03] p-5 backdrop-blur">
-                <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
+
+
+                <motionp
+                 variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                
+                
+                className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
                   Visual Balance
-                </p>
-                <p className="mt-3 text-sm leading-7 text-[#d1dce5]">
+                </motionp>
+
+
+                <motion.p
+                 variants={SlideRight(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="mt-3 text-sm leading-7 text-[#d1dce5]">
                   Construction, logistics, equipment, business operations, and
                   technology all appear as part of the same company identity.
-                </p>
+                </motion.p>
+
               </div>
               <div className="border border-[#36506a] bg-[linear-gradient(180deg,#162736_0%,#1e3143_100%)] p-5">
-                <p className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
+
+
+                <motion.p
+                  variants={SlideLeft(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="text-[0.72rem] uppercase tracking-[0.28em] text-[color:var(--color-gold-bright)]">
                   Client View
-                </p>
-                <p className="mt-3 text-sm leading-7 text-[#d1dce5]">
+                </motion.p>
+
+
+                <motion.p
+                  variants={SlideLeft(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                className="mt-3 text-sm leading-7 text-[#d1dce5]">
                   The visitor should understand quickly that KHANBAS supports more
                   than one part of a project or operation.
-                </p>
+                </motion.p>
+
+                
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

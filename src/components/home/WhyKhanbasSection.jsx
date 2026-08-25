@@ -44,7 +44,7 @@ export function WhyKhanbasSection() {
           variants={SlideRight(0.4)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
           className="rounded-[2rem] border border-black/8 bg-[rgba(255,255,255,0.48)] p-5 shadow-[0_18px_40px_rgba(47,34,18,0.08)] backdrop-blur sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
               Why Khanbas
@@ -76,7 +76,7 @@ export function WhyKhanbasSection() {
             variants={SlideLeft(0.4)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
             className="flex items-end justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
@@ -93,7 +93,7 @@ export function WhyKhanbasSection() {
             variants={SlideLeft(0.4)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
             
             className="mt-5 space-y-3">
               {scenarios.map((scenario, index) => (

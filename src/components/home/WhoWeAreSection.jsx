@@ -35,7 +35,7 @@ export function WhoWeAreSection() {
             variants={SlideRight(0.2)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
              className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
               Who We Are
             </motion.p>
@@ -44,7 +44,7 @@ export function WhoWeAreSection() {
   variants={SlideRight(0.3)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
   className="mt-4 max-w-lg font-display text-[2.8rem] leading-[0.92] text-[#16110c] sm:text-5xl"
 >
   Built to Support More.
@@ -58,7 +58,7 @@ export function WhoWeAreSection() {
             variants={SlideRight(0.5)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
             
             className="mt-6 max-w-lg text-[1.05rem] leading-8 text-[#3d3126]">
               KHANBAS is a multidisciplinary Saudi company providing
@@ -72,7 +72,7 @@ export function WhoWeAreSection() {
             variants={SlideRight(0.7)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
             
             className="mt-4 max-w-lg text-[0.98rem] leading-8 text-[#5e5548] sm:text-[1.05rem]">
               Our structure allows clients to access specialized capabilities
@@ -88,7 +88,7 @@ export function WhoWeAreSection() {
                           variants={SlideRight(0.7)}
                    initial="hidden"
                      whileInView="visible"
-                       viewport={{ once: false, amount: 0.2 }}
+                       viewport={{ once: true, amount: 0.2 }}
             
             
             className="mt-6 grid gap-3 sm:grid-cols-2">
@@ -140,7 +140,7 @@ export function WhoWeAreSection() {
             variants={SlideRight(0.7)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
              className="mt-6">
               <Link
                 to="/about"
@@ -162,7 +162,7 @@ export function WhoWeAreSection() {
                       variants={SlideLeft(0.6)}
   initial="hidden"
   whileInView="visible"
-  viewport={{ once: false, amount: 0.2 }}
+  viewport={{ once: true, amount: 0.2 }}
             className="grid gap-3 sm:grid-cols-2">
               {collageImages.map((image) => (
                 <article
