@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { SlideRight ,SlideLeft } from '../../utility/animation'
 
 const collageImages = [
   {
@@ -29,60 +31,139 @@ export function WhoWeAreSection() {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center lg:gap-10">
           <div className="max-w-xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
+            <motion.p
+            variants={SlideRight(0.2)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+             className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
               Who We Are
-            </p>
-            <h2 className="mt-4 max-w-lg font-display text-[2.8rem] leading-[0.92] text-[#16110c] sm:text-5xl">
-              Built to Support More.
-            </h2>
+            </motion.p>
+
+    <motion.h2
+  variants={SlideRight(0.3)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+  className="mt-4 max-w-lg font-display text-[2.8rem] leading-[0.92] text-[#16110c] sm:text-5xl"
+>
+  Built to Support More.
+</motion.h2>
+
+
+
             <div className="mt-5 h-px w-20 bg-[linear-gradient(90deg,rgba(201,151,61,0.95),rgba(201,151,61,0))]" />
-            <p className="mt-6 max-w-lg text-[1.05rem] leading-8 text-[#3d3126]">
+            <motion.p 
+            
+            variants={SlideRight(0.5)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+            
+            className="mt-6 max-w-lg text-[1.05rem] leading-8 text-[#3d3126]">
               KHANBAS is a multidisciplinary Saudi company providing
               engineering, technology, logistics, and business support
               services.
-            </p>
-            <p className="mt-4 max-w-lg text-[0.98rem] leading-8 text-[#5e5548] sm:text-[1.05rem]">
+            </motion.p>
+
+
+
+            <motion.p 
+            variants={SlideRight(0.7)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+            
+            className="mt-4 max-w-lg text-[0.98rem] leading-8 text-[#5e5548] sm:text-[1.05rem]">
               Our structure allows clients to access specialized capabilities
               across multiple requirements while working with one coordinated
               partner.
-            </p>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+
+            </motion.p>
+
+
+
+                      <motion.div 
+                          variants={SlideRight(0.7)}
+                   initial="hidden"
+                     whileInView="visible"
+                       viewport={{ once: true, amount: 0.2 }}
+            
+            
+            className="mt-6 grid gap-3 sm:grid-cols-2">
               <div className="rounded-[1.35rem] border border-[#223647]/55 bg-[linear-gradient(180deg,#172633_0%,#1d2f3d_100%)] p-3.5 shadow-[0_16px_34px_rgba(21,34,46,0.22)] transition hover:border-[#c9973d]/55 hover:bg-[linear-gradient(180deg,#223748_0%,#2b4253_100%)]">
-                <p className="text-xs uppercase tracking-[0.28em] text-[#d7a64e]">
+
+                <p 
+                
+                className="text-xs uppercase tracking-[0.28em] text-[#d7a64e]">
                   Core Position
                 </p>
-                <p className="mt-2 text-sm leading-7 text-[#edf2f5]">
+
+
+
+                <p
+                  
+
+                className="mt-2 text-sm leading-7 text-[#edf2f5]">
                   One coordinated partner across engineering, logistics,
                   technology, and operational support.
                 </p>
               </div>
+
+
+
+
+
+
               <div className="rounded-[1.35rem] border border-[#223647]/55 bg-[linear-gradient(180deg,#182836_0%,#213343_100%)] p-3.5 shadow-[0_16px_34px_rgba(21,34,46,0.2)] transition hover:border-[#c9973d]/55 hover:bg-[linear-gradient(180deg,#223748_0%,#2c4353_100%)]">
-                <p className="text-xs uppercase tracking-[0.28em] text-[#d7a64e]">
+                <p 
+              
+                className="text-xs uppercase tracking-[0.28em] text-[#d7a64e]">
                   Visual Balance
                 </p>
-                <p className="mt-2 text-sm leading-7 text-[#edf2f5]">
+
+                <p
+                
+                 className="mt-2 text-sm leading-7 text-[#edf2f5]">
                   The story stays broader than technology so the brand feels
                   diversified and credible.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="mt-6">
+
+
+
+
+            <motion.div
+            variants={SlideRight(0.7)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+             className="mt-6">
               <Link
                 to="/about"
                 className="inline-flex items-center rounded-full border border-[#223647]/70 bg-[linear-gradient(180deg,#172633_0%,#1d2f3d_100%)] px-5 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[#eef2f4] shadow-[0_14px_28px_rgba(21,34,46,0.22)] transition hover:border-[#c9973d]/80 hover:bg-[linear-gradient(135deg,#f1cb71_0%,#c9973d_100%)] hover:text-[#16110c]"
               >
                 Discover Khanbas
               </Link>
-            </div>
+            </motion.div>
+
+
+
           </div>
 
           <div className="relative">
             <div className="pointer-events-none absolute -left-4 -top-4 h-20 w-20 rounded-full bg-[rgba(201,151,61,0.12)] blur-2xl" />
             <div className="pointer-events-none absolute -bottom-4 right-6 h-24 w-24 rounded-full bg-[rgba(34,56,79,0.18)] blur-2xl" />
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <motion.div
+                      variants={SlideLeft(0.6)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+            className="grid gap-3 sm:grid-cols-2">
               {collageImages.map((image) => (
                 <article
                   key={image.label}
@@ -104,10 +185,11 @@ export function WhoWeAreSection() {
                   </div>
                 </article>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
     </section>
   )
 }
+export default WhoWeAreSection

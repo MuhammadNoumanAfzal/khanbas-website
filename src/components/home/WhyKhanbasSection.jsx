@@ -1,3 +1,6 @@
+import { motion } from 'framer-motion'
+import { SlideLeft, SlideRight } from '../../utility/animation'
+
 const reasons = [
   {
     title: 'Multidisciplinary',
@@ -37,7 +40,12 @@ export function WhyKhanbasSection() {
     <section className="bg-[linear-gradient(180deg,#f4eddf_0%,#ede4d5_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-6 lg:grid-cols-[0.8fr_1.2fr] lg:gap-8">
-          <div className="rounded-[2rem] border border-black/8 bg-[rgba(255,255,255,0.48)] p-5 shadow-[0_18px_40px_rgba(47,34,18,0.08)] backdrop-blur sm:p-6">
+          <motion.div
+          variants={SlideRight(0.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+          className="rounded-[2rem] border border-black/8 bg-[rgba(255,255,255,0.48)] p-5 shadow-[0_18px_40px_rgba(47,34,18,0.08)] backdrop-blur sm:p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
               Why Khanbas
             </p>
@@ -60,10 +68,16 @@ export function WhyKhanbasSection() {
                 </div>
               ))}
             </div>
-          </div>
+          </motion.div>
 
           <div>
-            <div className="flex items-end justify-between gap-4">
+        
+            <motion.div 
+            variants={SlideLeft(0.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+            className="flex items-end justify-between gap-4">
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.34em] text-[#a87124]">
                   Cross-Division Scenarios
@@ -73,9 +87,15 @@ export function WhyKhanbasSection() {
                 </h3>
               </div>
               <div className="hidden h-px flex-1 bg-[linear-gradient(90deg,rgba(201,151,61,0.45),transparent)] lg:block" />
-            </div>
+            </motion.div>
 
-            <div className="mt-5 space-y-3">
+            <motion.div
+            variants={SlideLeft(0.4)}
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true, amount: 0.2 }}
+            
+            className="mt-5 space-y-3">
               {scenarios.map((scenario, index) => (
                 <article
                   key={scenario.title}
@@ -103,7 +123,10 @@ export function WhyKhanbasSection() {
                   </div>
                 </article>
               ))}
-            </div>
+            </motion.div>
+
+
+
           </div>
         </div>
       </div>

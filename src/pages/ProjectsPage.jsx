@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
 import { PageShell } from '../components/page/PageShell.jsx'
+import { motion } from 'framer-motion'
+import { SlideLeft, SlideRight ,SlideUp ,SlideBottom } from '../utility/animation.js'
 
 const projectEnvironments = [
   {
@@ -74,7 +76,14 @@ export function ProjectsPage() {
         accent="Integrated capability view"
         backgroundImage="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=1600&q=80"
       >
-        <div className="flex flex-wrap gap-4">
+        <motion.div
+        variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+        
+        className="flex flex-wrap gap-4">
           <Link
             to="/industries"
             className="rounded-full border border-[color:var(--color-gold-soft)]/60 bg-[linear-gradient(135deg,rgba(244,205,112,0.95),rgba(171,124,42,0.95))] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] transition hover:-translate-y-0.5"
@@ -87,29 +96,72 @@ export function ProjectsPage() {
           >
             Discuss Your Requirement
           </Link>
-        </div>
+        </motion.div>
       </PageShell>
+
+
 
       <section className="bg-[linear-gradient(180deg,#f4eddf_0%,#eadcc8_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
-          <div>
-            <p className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
+          <motion.div
+          variants={SlideUp(0.2)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+          >
+            <motion.p
+             variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+            className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
               Project Perspective
-            </p>
-            <h2 className="mt-3 font-display text-[2.5rem] leading-[0.92] text-[#132538] sm:text-[3.1rem]">
+            </motion.p>
+
+
+            <motion.h2
+            variants={SlideLeft(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+            className="mt-3 font-display text-[2.5rem] leading-[0.92] text-[#132538] sm:text-[3.1rem]">
               Not one project type. Not one capability path.
-            </h2>
-            <p className="mt-5 max-w-2xl text-base leading-8 text-[#556674]">
+            </motion.h2>
+
+
+            <motion.p
+              variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+            className="mt-5 max-w-2xl text-base leading-8 text-[#556674]">
               The KHANBAS project story is not limited to one division. Some
               requirements stay within engineering, technology, logistics, or
               business services. Others require a broader combination of
               capabilities around one operating need.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
+          <motion.div 
+          variants={SlideLeft(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+          
+          className="grid gap-4 sm:grid-cols-3">
             {pagePrinciples.map((item) => (
-              <div
+              <motion.div
+
+              variants={SlideRight(0.5)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
                 key={item.label}
                 className="border border-[#d5c29d]/60 bg-white/45 p-5 shadow-[0_16px_30px_rgba(41,31,17,0.06)]"
               >
@@ -119,9 +171,9 @@ export function ProjectsPage() {
                 <p className="mt-3 text-sm leading-7 text-[#5b6c79]">
                   {item.value}
                 </p>
-              </div>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -129,21 +181,43 @@ export function ProjectsPage() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(201,151,61,0.12),transparent_24%),radial-gradient(circle_at_bottom_right,rgba(43,75,109,0.18),transparent_28%)]" />
         <div className="relative mx-auto max-w-7xl">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div className="max-w-3xl">
+            <motion.div
+             variants={SlideLeft(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+            className="max-w-3xl">
               <p className="text-xs uppercase tracking-[0.34em] text-[color:var(--color-gold-bright)]">
                 Featured Environment
               </p>
               <h2 className="mt-3 font-display text-[2.5rem] leading-[0.92] text-white sm:text-[3rem]">
                 One environment can involve multiple KHANBAS capabilities.
               </h2>
-            </div>
-            <p className="max-w-lg text-sm leading-7 text-[#9bb0c3]">
+            </motion.div>
+
+            <motion.p
+            variants={SlideRight(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        
+            className="max-w-lg text-sm leading-7 text-[#9bb0c3]">
               A featured project-style environment helps explain how the business
               structure works without overstating specific project history.
-            </p>
+            </motion.p>
           </div>
 
-          <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
+
+
+
+          <motion.div
+          
+          variants={SlideLeft(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+          className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr] lg:items-stretch">
             <div className="relative min-h-[390px] overflow-hidden border border-[#36506a] shadow-[0_24px_50px_rgba(0,0,0,0.18)]">
               <img
                 src={featuredEnvironment.image}
@@ -203,22 +277,37 @@ export function ProjectsPage() {
                 </p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
+
+
+
+
+
       <section className="bg-[linear-gradient(180deg,#efe4d1_0%,#e8dbc6_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="mx-auto max-w-7xl">
-          <div className="mb-8 max-w-3xl">
+          <motion.div
+          variants={SlideRight(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+          className="mb-8 max-w-3xl">
             <p className="text-xs uppercase tracking-[0.34em] text-[#9d6c24]">
               Integrated Examples
             </p>
             <h2 className="mt-3 font-display text-[2.5rem] leading-[0.92] text-[#132538] sm:text-[3rem]">
               Different project patterns, one multidisciplinary model.
             </h2>
-          </div>
+          </motion.div>
 
-          <div className="grid gap-5 lg:grid-cols-3">
+          <motion.div
+          variants={SlideLeft(0.4)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+          className="grid gap-5 lg:grid-cols-3">
             {integratedExamples.map((example, index) => (
               <article
                 key={example.title}
@@ -242,13 +331,18 @@ export function ProjectsPage() {
                 </p>
               </article>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       <section className="relative overflow-hidden bg-[linear-gradient(180deg,#09121a_0%,#0d1722_100%)] px-4 py-10 sm:px-6 sm:py-12 lg:px-8 lg:py-14">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_left,rgba(201,151,61,0.1),transparent_22%),radial-gradient(circle_at_right_bottom,rgba(43,75,109,0.16),transparent_28%)]" />
-        <div className="relative mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
+        <motion.div 
+        variants={SlideRight(0.3)}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+        className="relative mx-auto grid max-w-7xl gap-5 lg:grid-cols-2">
           {secondaryEnvironments.map((environment, index) => (
             <article
               key={environment.title}
@@ -287,7 +381,7 @@ export function ProjectsPage() {
               </div>
             </article>
           ))}
-        </div>
+        </motion.div>
       </section>
     </>
   )
