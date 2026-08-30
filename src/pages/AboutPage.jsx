@@ -85,7 +85,7 @@ export function AboutPage() {
           className="flex flex-wrap gap-4"
         >
           <Link
-            to="/engineering-contracting"
+            to="/divisions"
             className="cursor-pointer rounded-full border border-[color:var(--color-gold-soft)]/60 bg-[linear-gradient(135deg,rgba(244,205,112,0.95),rgba(171,124,42,0.95))] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-[color:var(--color-ink)] transition hover:-translate-y-0.5"
           >
             Explore Our Divisions

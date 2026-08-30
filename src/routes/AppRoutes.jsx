@@ -3,6 +3,7 @@ import { MainLayout } from '../components/layout/MainLayout.jsx'
 import { divisionsEnabled } from '../data/navigation.js'
 import { AboutPage } from '../pages/AboutPage.jsx'
 import { ContactPage } from '../pages/ContactPage.jsx'
+import { DivisionsPage } from '../pages/DivisionsPage.jsx'
 import { HomePage } from '../pages/HomePage.jsx'
 import { IndustriesPage } from '../pages/IndustriesPage.jsx'
 import { NotFoundPage } from '../pages/NotFoundPage.jsx'
@@ -18,6 +19,10 @@ export function AppRoutes() {
       <Route element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="about" element={<AboutPage />} />
+        <Route
+          path="divisions"
+          element={divisionsEnabled ? <DivisionsPage /> : <Navigate to="/" replace />}
+        />
         <Route path="industries" element={<IndustriesPage />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="contact" element={<ContactPage />} />

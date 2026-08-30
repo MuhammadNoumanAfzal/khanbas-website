@@ -34,6 +34,21 @@ export function MobileNav({ isOpen, onClose }) {
             Divisions
           </p>
           <div className="grid gap-2">
+            {divisionsEnabled ? (
+              <NavLink
+                to="/divisions"
+                onClick={onClose}
+                className={({ isActive }) =>
+                  `rounded-2xl px-4 py-3 text-sm uppercase tracking-[0.18em] transition ${
+                    isActive
+                      ? 'bg-[color:var(--color-gold-soft)]/15 text-[color:var(--color-gold-bright)]'
+                      : 'bg-white/[0.04] text-white hover:bg-white/8'
+                  }`
+                }
+              >
+                All Divisions
+              </NavLink>
+            ) : null}
             {divisionLinks.map((division) =>
               divisionsEnabled ? (
                 <NavLink

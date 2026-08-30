@@ -1,69 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SlideLeft, SlideRight } from "../../utility/animation";
-
-const divisions = [
-  {
-    title: "Engineering & Contracting",
-    to: "/engineering-contracting",
-    image:
-      "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=80",
-    summary:
-      "Dependable project execution across civil works, MEP, infrastructure, fit-out, and maintenance.",
-    capabilities: [
-      "Civil Works",
-      "General Construction",
-      "MEP Works",
-      "Infrastructure",
-    ],
-    tone: "from-[#8d6332]/55 to-[#0d141c]/80",
-  },
-  {
-    title: "Technology & Digital",
-    to: "/technology",
-    image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
-    summary:
-      "Operational technology, software, AI, and connected systems aligned with real business needs.",
-    capabilities: [
-      "IT Infrastructure",
-      "Software Solutions",
-      "CCTV",
-      "Fleet Technology",
-    ],
-    tone: "from-[#27435f]/55 to-[#0d141c]/82",
-  },
-  {
-    title: "Logistics & Equipment",
-    to: "/logistics-equipment",
-    image:
-      "https://images.unsplash.com/photo-1501700493788-fa1a4fc9fe62?auto=format&fit=crop&w=1200&q=80",
-    summary:
-      "Flexible transport, vehicles, machinery, and equipment support for projects and operations.",
-    capabilities: [
-      "Fleet Rental",
-      "Machinery Rental",
-      "Transportation",
-      "Logistics Support",
-    ],
-    tone: "from-[#7a5628]/50 to-[#111821]/84",
-  },
-  {
-    title: "Management & Business Services",
-    to: "/business-services",
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1200&q=80",
-    summary:
-      "Practical coordination, procurement, project support, and operational services built around clients.",
-    capabilities: [
-      "Management Services",
-      "Procurement",
-      "Project Support",
-      "Operational Support",
-    ],
-    tone: "from-[#44586c]/45 to-[#0f141c]/84",
-  },
-];
+import { divisions } from "../../data/divisions.js";
 
 export function BusinessDivisionsSection() {
   return (
@@ -112,9 +50,9 @@ export function BusinessDivisionsSection() {
           viewport={{ once: true, amount: 0.2 }}
           className="mt-7 grid gap-4 lg:grid-cols-2"
         >
-          {divisions.map((division, index) => (
+            {divisions.map((division, index) => (
             <article
-              key={division.title}
+              key={division.label}
               className="group relative overflow-hidden rounded-[1.8rem] border border-white/10 bg-[rgba(255,255,255,0.03)] shadow-[0_20px_42px_rgba(0,0,0,0.18)]"
             >
               <div className="grid md:grid-cols-[1.02fr_0.98fr] md:items-stretch">
@@ -124,7 +62,7 @@ export function BusinessDivisionsSection() {
                 >
                   <img
                     src={division.image}
-                    alt={division.title}
+                    alt={division.label}
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.05]"
                   />
 
@@ -144,7 +82,7 @@ export function BusinessDivisionsSection() {
                     to={division.to}
                     className="mt-2 inline-block min-h-[5.5rem] cursor-pointer font-display text-[1.7rem] leading-tight text-white transition hover:text-[color:var(--color-gold-bright)]"
                   >
-                    {division.title}
+                    {division.label}
                   </Link>
 
                   <p className="mt-2.5 min-h-[4.5rem] text-sm leading-6 text-[color:var(--color-sand)]">
@@ -152,7 +90,7 @@ export function BusinessDivisionsSection() {
                   </p>
 
                   <div className="mt-3.5 flex min-h-[5.75rem] flex-wrap content-start gap-1.5">
-                    {division.capabilities.map((item) => (
+                    {division.services.slice(0, 4).map((item) => (
                       <span
                         key={item}
                         className="rounded-full border border-white/10 px-2.5 py-1.5 text-[0.66rem] uppercase tracking-[0.16em] text-[color:var(--color-mist)]"
