@@ -22,19 +22,22 @@ export function DesktopNav() {
       ))}
 
       <div className="group relative">
-        <button
-          type="button"
-          className={`${baseLinkClass} ${
-            divisionsEnabled
-              ? 'flex items-center gap-2 text-white hover:bg-white/8 hover:text-[color:var(--color-gold-bright)]'
-              : 'flex cursor-not-allowed items-center gap-2 text-white/60'
-          }`}
-          disabled={!divisionsEnabled}
+        <NavLink
+          to="/divisions"
+          className={({ isActive }) =>
+            `${baseLinkClass} ${
+              divisionsEnabled
+                ? isActive
+                  ? 'flex items-center gap-2 bg-[color:var(--color-gold-soft)]/18 text-[color:var(--color-gold-bright)]'
+                  : 'flex items-center gap-2 text-white hover:bg-white/8 hover:text-[color:var(--color-gold-bright)]'
+                : 'flex cursor-not-allowed items-center gap-2 text-white/60'
+            }`
+          }
           aria-disabled={!divisionsEnabled}
         >
           Divisions
           <span className="text-xs">+</span>
-        </button>
+        </NavLink>
         {divisionsEnabled ? (
           <div className="pointer-events-none absolute left-0 top-full z-30 mt-4 w-80 translate-y-2 rounded-[1.75rem] border border-white/10 bg-[color:var(--color-panel-strong)] p-3 opacity-0 shadow-[0_30px_60px_rgba(0,0,0,0.35)] backdrop-blur transition duration-300 group-hover:pointer-events-auto group-hover:translate-y-0 group-hover:opacity-100">
             {divisionLinks.map((division) => (

@@ -1,23 +1,8 @@
-export const divisionsEnabled = false
+import { divisionLinks } from './divisions.js'
 
-export const divisionLinks = [
-  {
-    label: 'Engineering & Contracting',
-    to: '/engineering-contracting',
-  },
-  {
-    label: 'Technology & Digital',
-    to: '/technology',
-  },
-  {
-    label: 'Logistics & Equipment',
-    to: '/logistics-equipment',
-  },
-  {
-    label: 'Management & Business Services',
-    to: '/business-services',
-  },
-]
+export const divisionsEnabled = true
+
+export { divisionLinks }
 
 export const primaryNavLinks = [
   { label: 'Home', to: '/' },
